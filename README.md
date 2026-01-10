@@ -121,6 +121,7 @@
 - [Workflow 3: Universal Bot](#3️⃣-universal-estimator-bot-text--photo--pdf) — Text + Photo + PDF
 - [Workflow 4: CAD/BIM Pipeline](#4️⃣-cad-bim-cost-estimation-pipeline) — Revit/IFC/DWG to estimate
 - [Workflows Quick Start](#workflows-quick-start) — Setup in 4 steps
+- [⚠️ n8n 2.0+ Setup](#️-n8n-20-setup-required) — Enable Execute Command node
 
 ### CAD/BIM Pipeline Details
 - [Prerequisites](#-prerequisites) — Required components
@@ -766,7 +767,7 @@ The workflow is yours to adapt. No restrictions. No licensing fees. Full control
 
 | Component                                          | Requirement                            | Description                                                           |
 |----------------------------------------------------|----------------------------------------|-----------------------------------------------------------------------|
-| **[n8n](https://n8n.io/)**                         | v1.0+ (self-hosted)                    | Workflow automation platform for orchestrating the estimation pipeline|
+| **[n8n](https://n8n.io/)**                         | v1.0+ (v2.0+ requires [setup](#️-n8n-20-setup-required))                    | Workflow automation platform for orchestrating the estimation pipeline|
 | **[Qdrant](https://qdrant.tech/)**                 | Cloud or self-hosted instance          | Vector database for semantic search across construction work items    |
 | **[OpenAI API](https://platform.openai.com/)**     | For embeddings (`text-embedding-3-large`)| Generates vector embeddings for BIM elements and cost database matching|
 | **LLM API**                                        | OpenAI / Claude / Gemini / xAI Grok    | AI models for work item classification and estimate generation        |
@@ -811,6 +812,43 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_en/snapshots/upload" \
 - Enable the workflow in n8n
 - For Telegram bots: send `/start` to your bot
 - For web forms: open the form URL provided by n8n
+
+---
+
+## ⚠️ n8n 2.0+ Setup Required
+
+> **Starting from n8n version 2.0, the Execute Command node is disabled by default for security reasons.**
+> 
+> Without the configuration below, workflows using Execute Command (especially CAD/BIM Pipeline) **will not work** — nodes will show with a question mark or won't be recognized.
+
+### Quick Fix
+
+**Windows (CMD) — run each time:**
+```cmd
+set NODES_EXCLUDE=[] && npx n8n
+```
+
+**Permanent solution — create once:**
+
+Create file `C:\Users\YOUR_USER\.n8n\.env` with:
+```
+NODES_EXCLUDE=[]
+```
+Then just run `npx n8n` as usual.
+
+**Docker:**
+```yaml
+environment:
+  - NODES_EXCLUDE=[]
+```
+
+### Verify Setup
+
+1. Start n8n
+2. Click **+** → search for **"Execute Command"**
+3. If the node appears → ✅ you're all set!
+
+> 📚 More details: [n8n 2.0 Breaking Changes](https://docs.n8n.io/2-0-breaking-changes/)
 
 ---
 
@@ -897,6 +935,7 @@ Example: `DE_BERLIN_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR`
 
 | Issue                        | Solution                                                    |
 |------------------------------|-------------------------------------------------------------|
+| "Execute Command missing" (n8n 2.0+) | Set `NODES_EXCLUDE=[]` environment variable. See [n8n 2.0+ Setup](#️-n8n-20-setup-required) |
 | "No Excel file found"        | Check `path_to_converter` and `project_file` paths          |
 | "Qdrant connection failed"   | Verify Qdrant URL and API key in credentials                |
 | "Rate limit exceeded"        | Reduce batch size or add delays between API calls           |
