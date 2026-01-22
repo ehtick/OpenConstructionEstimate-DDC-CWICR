@@ -2,14 +2,14 @@
   + 説明、写真、CAD (BIM) に基づく見積計算のための n8n パイプライン</h3>
 
 <p align="center">
-  <a href="README.md">English</a> •
-  <a href="README.zh-CN.md">中文</a> •
-  <a href="README.es.md">Español</a> •
-  <a href="README.pt-BR.md">Português</a> •
-  <a href="README.ru.md">Русский</a> •
-  <a href="README.ja.md"><b>日本語</b></a> •
-  <a href="README.de.md">Deutsch</a> •
-  <a href="README.fr.md">Français</a>
+  <a href="README.md">🇬🇧 English</a> •
+  <a href="README.zh-CN.md">🇨🇳 中文</a> •
+  <a href="README.es.md">🇪🇸 Español</a> •
+  <a href="README.pt-BR.md">🇧🇷 Português</a> •
+  <a href="README.ru.md">🇷🇺 Русский</a> •
+  <a href="README.ja.md"><b>🇯🇵 日本語</b></a> •
+  <a href="README.de.md">🇩🇪 Deutsch</a> •
+  <a href="README.fr.md">🇫🇷 Français</a>
 </p>
 
 <p align="center">

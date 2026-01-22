@@ -2,14 +2,14 @@
   + Pipelines n8n for calculating estimates based on descriptions, photos, and CAD (BIM)</h3>
 
 <p align="center">
-  <a href="README.md"><b>English</b></a> •
-  <a href="README.zh-CN.md">中文</a> •
-  <a href="README.es.md">Español</a> •
-  <a href="README.pt-BR.md">Português</a> •
-  <a href="README.ru.md">Русский</a> •
-  <a href="README.ja.md">日本語</a> •
-  <a href="README.de.md">Deutsch</a> •
-  <a href="README.fr.md">Français</a>
+  <a href="README.md"><b>🇬🇧 English</b></a> •
+  <a href="README.zh-CN.md">🇨🇳 中文</a> •
+  <a href="README.es.md">🇪🇸 Español</a> •
+  <a href="README.pt-BR.md">🇧🇷 Português</a> •
+  <a href="README.ru.md">🇷🇺 Русский</a> •
+  <a href="README.ja.md">🇯🇵 日本語</a> •
+  <a href="README.de.md">🇩🇪 Deutsch</a> •
+  <a href="README.fr.md">🇫🇷 Français</a>
 </p>
 
 <p align="center">
@@ -116,15 +116,15 @@
 
 ## 📑 Table of Contents
 
-### AI Integration
+### 🤖 AI Integration
 - [Perfect Fuel for AI](#-perfect-fuel-for-your-ai-products) — Why this database is ideal for AI
-- [Claude Code](#-claude-code--ai-coding-assistant) — AI coding assistant usage
+- [Claude Code & Google Antigravity](#-claude-code--google-antigravity--ai-coding-assistants) — AI coding assistants
 - [n8n](#-n8n--visual-workflow-automation) — Workflow automation
 - [Dify](#-dify--build-llm-applications) — LLM app development
 - [Sim AI & Others](#-sim-ai--similar-platforms) — Compatible platforms
 - [Universal Use Cases](#-universal-use-cases) — What you can build
 
-### Database & Data
+### 📊 Database & Data
 - [About](#about) — What is DDC CWICR
 - [Available Formats](#available-formats) — Excel, Parquet, CSV, Qdrant
 - [Data Schema](#data-schema) — 85 fields structure
@@ -132,7 +132,7 @@
 - [Methodology](#methodology) — Resource-based costing principles
 - [Historical Context](#historical-context) — 100+ years of standards
 
-### n8n Workflows
+### ⚡ n8n Workflows
 - [n8n Workflows Overview](#-n8n-workflows) — Choose your input type
 - [Try It Now — Live Demo Bots](#-try-it-now--live-demo-bots) — Test instantly in Telegram
 - [Workflow 1: Text Estimator Bot](#1️⃣-text-estimator-bot) — Telegram bot for text input
@@ -140,31 +140,32 @@
 - [Workflow 3: Universal Bot](#3️⃣-universal-estimator-bot-text--photo--pdf) — Text + Photo + PDF
 - [Workflow 4: CAD/BIM Pipeline](#4️⃣-cad-bim-cost-estimation-pipeline) — Revit/IFC/DWG to estimate
 - [Workflows Quick Start](#workflows-quick-start) — Setup in 4 steps
-- [⚠️ n8n 2.0+ Setup](#️-n8n-20-setup-required) — Enable Execute Command node
+- [n8n 2.0+ Setup](#️-n8n-20-setup-required) — Enable Execute Command node
 
-### CAD/BIM Pipeline Details
+### 🏗️ CAD/BIM Pipeline
 - [Prerequisites](#-prerequisites) — Required components
 - [Pipeline Stages](#-pipeline-stages) — 10-stage processing
 - [LLM Model Selection](#️-llm-model-selection) — OpenAI, Claude, Gemini, Grok
 - [Output Files](#-output-files) — HTML & Excel reports
 - [Troubleshooting](#️-troubleshooting) — Common issues
 
-### Vector Database
+### 🔍 Vector Database
 - [Vector Database](#vector-database) — Semantic search with Qdrant
 - [Releases](#releases) — Download snapshots
 - [Collections](#collections) — 9 language collections
 - [Docker Deployment](#docker-deployment) — Self-hosted setup
 
-### Getting Started
+### 🚀 Getting Started
 - [Quick Start - Python](#quick-start) — Tabular data & semantic search
 - [Integration Use Cases](#integration) — Entry to Advanced level
 
-### Community
+### 👥 Community
 - [Resources & Community](#resources--community) — Links & channels
 - [Consulting & Training](#consulting--training) — Professional services
 - [Contributing](#contributing) — Submit your workflows
 - [License](#license) — CC BY 4.0 & MIT
 - [Support the Project](#support-the-project) — Sponsor & donate
+- [🤖 AI Instructions](#ai-instructions) — Documentation for AI assistants
 
 
 ---
@@ -1343,7 +1344,7 @@ Automate construction data processing with ready-made CAD-BIM n8n workflows:
 
 ---
 
-## AI Instructions
+## 🤖 AI Instructions
 
 The `AI_INSTRUCTIONS/` folder contains comprehensive documentation for AI coding assistants to work effectively with this construction cost database.
 
