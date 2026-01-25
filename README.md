@@ -237,6 +237,48 @@ Export to **Excel, PDF, HTML, ERP systems, BIM platforms** — the structured 85
 </tr>
 </table>
 
+---
+
+## 🎯 DDC Skills — 167 Ready-to-Use AI Automations
+
+> **New!** [DDC Skills for AI Agents in Construction](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — a complete automation toolkit for construction companies.
+
+<p align="center">
+  <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
+    <img src="https://img.shields.io/badge/DDC_Skills-167_AI_Automations-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+  </a>
+</p>
+
+### How It Works
+
+```
+1. Clone the Skills repository
+2. Open with Claude Code, Cursor, or GitHub Copilot
+3. Describe what you want to automate — AI guides you step by step
+```
+
+### Time Savings
+
+| Process | Before | After | Reduction |
+|---------|--------|-------|-----------|
+| Rate lookups | 15 min | 10 sec | 99% |
+| Daily reports | Manual | Automated | 92% |
+| Cost estimates | Hours | Minutes | 87% |
+| Budget tracking | Spreadsheets | Real-time | 87% |
+
+### What's Included
+
+| Folder | Skills | Description |
+|--------|--------|-------------|
+| **DDC Toolkit** | 85 | Production tools including CWICR database integration |
+| **DDC Book** | 50 | Skills based on Data-Driven Construction methodology |
+| **DDC Insights** | 5 | n8n workflow templates |
+| **DDC Curated** | 5 | External integration skills |
+| **DDC Innovative** | 22 | Advanced AI/ML capabilities |
+
+The Skills repository provides **direct integration with this CWICR database** — semantic search, automated cost calculations, daily reports, defect detection, and more.
+
+**→ [Get Started with DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
 
 ---
 
