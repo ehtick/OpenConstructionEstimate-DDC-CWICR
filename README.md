@@ -509,9 +509,9 @@ erDiagram
 
     LABOR {
         string resource_code FK
-        float labor_hours_workers "196"
+        float labor_hours_workers "172"
         float labor_hours_machinists "1.67"
-        int count_workers_per_unit "196"
+        int count_workers_per_unit "172"
         int count_machinists_per_unit "2"
         float cost_of_working_hours "3088.11"
     }
@@ -562,7 +562,7 @@ The 85 database fields are organized into logical groups that reflect the resour
 
 | Component         | Technology Norm  | ×   | Regional Price  | =   | Cost                    |
 |-------------------|------------------|-----|-----------------|-----|-------------------------|
-| 👷 **Labor**      | 196 hrs/100m²    | ×   | €17.95/hr       | =   | €3,088.11               |
+| 👷 **Labor**      | 172 hrs/100m²    | ×   | €17.95/hr       | =   | €3,088.11               |
 | 🧱 **Materials**  | 632 m²/100m²     | ×   | €5.02/m²        | =   | €3,170.73               |
 | 🚜 **Equipment**  | 1.67 hrs/100m²   | ×   | €38.42/hr       | =   | €64.18                  |
 |                   |                  |     | **Total**       | =   | **€7,725.91 per 100m²** |
@@ -1026,7 +1026,7 @@ flowchart TB
     S75 --> HTML & XLS
 
     style INPUT fill:#f4f4f5,stroke:#d4d4d8,color:#18181b
-    style EXTRACT fill:#e0f2fe,stroke:#bae6fd,color:#0f196a
+    style EXTRACT fill:#e0f2fe,stroke:#bae6fd,color:#0f172a
     style PREP fill:#ede9fe,stroke:#ddd6fe,color:#1e1b4b
     style STAGE_PLAN fill:#ecfdf5,stroke:#bbf7d0,color:#064e3b
     style STAGE4 fill:#fef9c3,stroke:#fef3c7,color:#78350f
