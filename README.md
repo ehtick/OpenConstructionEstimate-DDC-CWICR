@@ -1501,3 +1501,11 @@ If you find this useful, please consider supporting:
 <p align="left">
   <sub>© 2025 Artem Boiko · <a href="https://datadrivenconstruction.io">datadrivenconstruction.io</a></sub>
 </p>
+
+---
+
+## Trademarks
+
+Autodesk®, Revit®, AutoCAD®, and DWG™ are registered trademarks or trademarks of Autodesk, Inc. OpenAI™ is a trademark of OpenAI, Inc. Qdrant is a trademark of Qdrant Solutions GmbH. All other brand names, product names, or trademarks belong to their respective holders.
+
+This project is not affiliated with, endorsed by, or sponsored by Autodesk, OpenAI, Qdrant, or any other trademark holders mentioned above.
