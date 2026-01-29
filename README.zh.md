@@ -239,6 +239,49 @@ DDC CWICR 提供**完整、结构化的工作描述**，可在任何系统或格
 
 ---
 
+## 🎯 DDC Skills — 196 个即用型 AI 自动化
+
+> **新功能！** [建筑行业 AI 代理 DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — 建筑公司的完整自动化工具包。
+
+<p align="center">
+  <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_AI自动化-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+  </a>
+</p>
+
+### 工作原理
+
+```
+1. 克隆 Skills 仓库
+2. 使用 Claude Code、Cursor 或 GitHub Copilot 打开
+3. 描述您想自动化的内容 — AI 将逐步引导您
+```
+
+### 时间节省
+
+| 流程 | 之前 | 之后 | 减少 |
+|------|------|------|------|
+| 价格查询 | 15分钟 | 10秒 | 99% |
+| 日报 | 手动 | 自动 | 92% |
+| 成本估算 | 数小时 | 数分钟 | 87% |
+| 预算跟踪 | 电子表格 | 实时 | 87% |
+
+### 包含内容
+
+| 文件夹 | Skills | 描述 |
+|--------|--------|------|
+| **DDC Toolkit** | 85 | 生产工具，包括 CWICR 数据库集成 |
+| **DDC Book** | 50 | 基于 Data-Driven Construction 方法论的技能 |
+| **DDC Insights** | 5 | n8n 工作流模板 |
+| **DDC Curated** | 5 | 外部集成技能 |
+| **DDC Innovative** | 22 | 高级 AI/ML 功能 |
+
+Skills 仓库提供**与此 CWICR 数据库的直接集成** — 语义搜索、自动成本计算、日报、缺陷检测等。
+
+**→ [开始使用 DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
+
+---
+
 ### 💻 Claude Code & Google Antigravity — AI 编程助手
 
 使用 DDC CWICR 最快捷的方式。只需在 Claude Code 或 Google Antigravity 中打开仓库，用自然语言提问即可。
@@ -1455,3 +1498,11 @@ AI 助手可以帮助您：
 <p align="left">
   <sub>© 2025 Artem Boiko · <a href="https://datadrivenconstruction.io">datadrivenconstruction.io</a></sub>
 </p>
+
+---
+
+## 商标
+
+Autodesk®、Revit®、AutoCAD® 和 DWG™ 是 Autodesk, Inc. 的注册商标或商标。OpenAI™ 是 OpenAI, Inc. 的商标。Qdrant 是 Qdrant Solutions GmbH 的商标。所有其他品牌名称、产品名称或商标均属于其各自所有者。
+
+本项目与 Autodesk、OpenAI、Qdrant 或上述任何其他商标持有者无关联、未获其认可或赞助。

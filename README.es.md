@@ -239,6 +239,49 @@ Exportación a **Excel, PDF, HTML, sistemas ERP, plataformas BIM** — el esquem
 
 ---
 
+## 🎯 DDC Skills — 196 Automatizaciones de IA Listas para Usar
+
+> **¡Nuevo!** [DDC Skills para Agentes de IA en Construcción](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — un kit de herramientas de automatización completo para empresas constructoras.
+
+<p align="center">
+  <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_Automatizaciones_IA-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+  </a>
+</p>
+
+### Cómo Funciona
+
+```
+1. Clonar el repositorio de Skills
+2. Abrir con Claude Code, Cursor o GitHub Copilot
+3. Describir lo que quieres automatizar — la IA te guía paso a paso
+```
+
+### Ahorro de Tiempo
+
+| Proceso | Antes | Después | Reducción |
+|---------|-------|---------|-----------|
+| Búsqueda de precios | 15 min | 10 seg | 99% |
+| Informes diarios | Manual | Automatizado | 92% |
+| Estimaciones de costos | Horas | Minutos | 87% |
+| Seguimiento de presupuesto | Hojas de cálculo | Tiempo real | 87% |
+
+### Contenido Incluido
+
+| Carpeta | Skills | Descripción |
+|---------|--------|-------------|
+| **DDC Toolkit** | 85 | Herramientas de producción incl. integración con base de datos CWICR |
+| **DDC Book** | 50 | Skills basados en metodología Data-Driven Construction |
+| **DDC Insights** | 5 | Plantillas de flujos de trabajo n8n |
+| **DDC Curated** | 5 | Skills de integración externa |
+| **DDC Innovative** | 22 | Capacidades avanzadas de IA/ML |
+
+El repositorio de Skills proporciona **integración directa con esta base de datos CWICR** — búsqueda semántica, cálculos de costos automatizados, informes diarios, detección de defectos y más.
+
+**→ [Comenzar con DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
+
+---
+
 ### 💻 Claude Code & Google Antigravity — Asistentes de Programación IA
 
 La forma más rápida de trabajar con DDC CWICR. Solo abre el repositorio en Claude Code o Google Antigravity y haz preguntas en lenguaje natural.
@@ -1455,3 +1498,11 @@ Si encuentras esto útil, por favor considera apoyar:
 <p align="left">
   <sub>© 2025 Artem Boiko · <a href="https://datadrivenconstruction.io">datadrivenconstruction.io</a></sub>
 </p>
+
+---
+
+## Marcas Comerciales
+
+Autodesk®, Revit®, AutoCAD® y DWG™ son marcas registradas o marcas comerciales de Autodesk, Inc. OpenAI™ es una marca comercial de OpenAI, Inc. Qdrant es una marca comercial de Qdrant Solutions GmbH. Todos los demás nombres de marcas, nombres de productos o marcas comerciales pertenecen a sus respectivos propietarios.
+
+Este proyecto no está afiliado, respaldado ni patrocinado por Autodesk, OpenAI, Qdrant ni ningún otro titular de marcas comerciales mencionado anteriormente.

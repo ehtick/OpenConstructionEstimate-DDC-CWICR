@@ -239,6 +239,49 @@ Export nach **Excel, PDF, HTML, ERP-Systeme, BIM-Plattformen** — das strukturi
 
 ---
 
+## 🎯 DDC Skills — 196 Einsatzbereite KI-Automatisierungen
+
+> **Neu!** [DDC Skills für KI-Agenten im Bauwesen](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — ein komplettes Automatisierungs-Toolkit für Bauunternehmen.
+
+<p align="center">
+  <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_KI_Automatisierungen-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+  </a>
+</p>
+
+### So funktioniert es
+
+```
+1. Skills-Repository klonen
+2. Mit Claude Code, Cursor oder GitHub Copilot öffnen
+3. Beschreiben Sie, was Sie automatisieren möchten — KI führt Sie Schritt für Schritt
+```
+
+### Zeitersparnis
+
+| Prozess | Vorher | Nachher | Reduzierung |
+|---------|--------|---------|-------------|
+| Preisrecherche | 15 Min | 10 Sek | 99% |
+| Tagesberichte | Manuell | Automatisiert | 92% |
+| Kostenschätzungen | Stunden | Minuten | 87% |
+| Budgetverfolgung | Tabellen | Echtzeit | 87% |
+
+### Enthaltene Inhalte
+
+| Ordner | Skills | Beschreibung |
+|--------|--------|--------------|
+| **DDC Toolkit** | 85 | Produktionswerkzeuge inkl. CWICR-Datenbankintegration |
+| **DDC Book** | 50 | Skills basierend auf Data-Driven Construction Methodik |
+| **DDC Insights** | 5 | n8n-Workflow-Vorlagen |
+| **DDC Curated** | 5 | Externe Integrations-Skills |
+| **DDC Innovative** | 22 | Erweiterte KI/ML-Fähigkeiten |
+
+Das Skills-Repository bietet **direkte Integration mit dieser CWICR-Datenbank** — semantische Suche, automatische Kostenberechnungen, Tagesberichte, Fehlererkennung und mehr.
+
+**→ [DDC Skills entdecken](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
+
+---
+
 ### 💻 Claude Code & Google Antigravity — KI-Programmierassistenten
 
 Der schnellste Weg, mit DDC CWICR zu arbeiten. Öffnen Sie einfach das Repository in Claude Code oder Google Antigravity und stellen Sie Fragen in natürlicher Sprache.
@@ -1455,3 +1498,11 @@ Wenn Sie dies nützlich finden, erwägen Sie bitte eine Unterstützung:
 <p align="left">
   <sub>© 2025 Artem Boiko · <a href="https://datadrivenconstruction.io">datadrivenconstruction.io</a></sub>
 </p>
+
+---
+
+## Markenzeichen
+
+Autodesk®, Revit®, AutoCAD® und DWG™ sind eingetragene Marken oder Marken von Autodesk, Inc. OpenAI™ ist eine Marke von OpenAI, Inc. Qdrant ist eine Marke von Qdrant Solutions GmbH. Alle anderen Markennamen, Produktnamen oder Markenzeichen gehören ihren jeweiligen Inhabern.
+
+Dieses Projekt ist nicht mit Autodesk, OpenAI, Qdrant oder anderen oben genannten Markeninhabern verbunden, wird nicht von ihnen unterstützt oder gesponsert.
