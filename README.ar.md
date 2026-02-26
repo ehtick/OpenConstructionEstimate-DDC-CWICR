@@ -158,6 +158,11 @@
 - [المجموعات](#المجموعات) — 9 مجموعات لغوية
 - [نشر Docker](#نشر-docker) — إعداد مستضاف ذاتياً
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — واجهة REST API مجانية لأسعار البناء
+- [نقاط نهاية API](#نقاط-نهاية-api) — البحث، اللغات، الإحصائيات
+- [أمثلة الكود](#أمثلة-الكود-api) — cURL، Python، JavaScript
+
 ### 🚀 البدء
 - [البداية السريعة - Python](#البداية-السريعة) — البيانات الجدولية والبحث الدلالي
 - [حالات استخدام التكامل](#التكامل) — من المستوى المبتدئ إلى المتقدم
@@ -1085,6 +1090,122 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_ar/snapshots/upload" \
 ```
 
 <div dir="rtl">
+
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+</div>
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/توثيق_API-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/المصادقة-غير_مطلوبة-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/التكلفة-مجاني-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/حد_الطلبات-60_طلب/دقيقة-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+<div dir="rtl">
+
+واجهة REST API مجانية للبحث عن بنود أعمال البناء مع تفصيل كامل للتكاليف والعمالة والمواد والمعدات. **55,719 بند** بـ **9 لغات** مع **84 حقلاً** لكل بند.
+
+**عنوان URL الأساسي:** `https://buildcalculator.io/api/v1`
+
+### نقاط نهاية API
+
+#### `GET/POST /api/v1/search` — البحث عن بنود البناء
+
+| المعامل | النوع | الافتراضي | مطلوب | الوصف |
+|---------|-------|-----------|-------|-------|
+| `q` | string | — | نعم | استعلام البحث (حد أدنى حرفان). يعمل بأي لغة |
+| `lang` | string | `en` | لا | لغة قاعدة البيانات: `en`، `ru`، `de`، `fr`، `es`، `pt`، `zh`، `ar`، `hi` |
+| `top` | integer | 5 | لا | عدد النتائج (1–20) |
+
+#### `GET /api/v1/languages` — اللغات المدعومة
+
+يعرض جميع اللغات المتاحة مع عدد البنود.
+
+#### `GET /api/v1/stats` — إحصائيات قاعدة البيانات
+
+يعرض عدد البنود والفئات واللغات والبيانات الوصفية.
+
+### أمثلة الكود API
+
+</div>
+
+**cURL:**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=أساسات+خرسانية&lang=ar&top=5"
+```
+
+**Python:**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "بناء جدران طوب", "lang": "ar", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript:**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=تسقيف&lang=ar&top=3"
+);
+const data = await res.json();
+```
+
+<div dir="rtl">
+
+**مثال الاستجابة:**
+
+</div>
+
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+<div dir="rtl">
+
+**رموز الخطأ:**
+
+| الرمز | المعنى | الإجراء |
+|-------|--------|---------|
+| 400 | استعلام مفقود أو غير صالح | تحقق من معامل `q` (حد أدنى حرفان) |
+| 429 | تم تجاوز حد الطلبات | انتظر وأعد المحاولة (60 طلب/دقيقة) |
+| 500 | خطأ في الخادم | أعد المحاولة أو تواصل مع الدعم |
+
+> 📖 التوثيق الكامل: [buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
 
 ---
 

@@ -155,6 +155,11 @@
 - [コレクション](#コレクション) — 9言語のコレクション
 - [Dockerデプロイメント](#dockerデプロイメント) — セルフホステッドセットアップ
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — 建設価格検索用の無料REST API
+- [APIエンドポイント](#apiエンドポイント) — 検索、言語、統計
+- [コード例](#apiコード例) — cURL、Python、JavaScript
+
 ### はじめに
 - [クイックスタート - Python](#クイックスタート) — 表形式データ＆セマンティック検索
 - [統合ユースケース](#統合) — 入門から上級レベルまで
@@ -1277,6 +1282,109 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_en/snapshots/upload" \
 
 # ダッシュボード: http://localhost:6333/dashboard
 ```
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/APIドキュメント-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/認証-不要-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/料金-無料-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/レート制限-60_リクエスト/分-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+建設作業項目を検索するための無料REST API。コスト内訳、労務費、材料費、機器データを完全網羅。**55,719項目**、**9言語**対応、各項目**84フィールド**。
+
+**ベースURL：** `https://buildcalculator.io/api/v1`
+
+### APIエンドポイント
+
+#### `GET/POST /api/v1/search` — 建設作業項目の検索
+
+| パラメータ | 型 | デフォルト | 必須 | 説明 |
+|-----------|------|---------|------|------|
+| `q` | string | — | はい | 検索クエリ（最小2文字）。任意の言語で動作 |
+| `lang` | string | `en` | いいえ | データベース言語：`en`、`ru`、`de`、`fr`、`es`、`pt`、`zh`、`ar`、`hi` |
+| `top` | integer | 5 | いいえ | 結果数（1～20） |
+
+#### `GET /api/v1/languages` — サポート言語一覧
+
+利用可能なすべての言語と項目数を返します。
+
+#### `GET /api/v1/stats` — データベース統計
+
+項目数、カテゴリ、言語、メタデータを返します。
+
+### APIコード例
+
+**cURL：**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=コンクリート基礎&lang=en&top=5"
+```
+
+**Python：**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "brick masonry walls", "lang": "en", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript：**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=HVAC+ducting&lang=en&top=3"
+);
+const data = await res.json();
+```
+
+**レスポンス例：**
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+**エラーコード：**
+
+| コード | 意味 | 対応 |
+|--------|------|------|
+| 400 | クエリが不足または無効 | `q`パラメータを確認（最小2文字） |
+| 429 | レート制限超過 | 待機して再試行（60リクエスト/分） |
+| 500 | サーバーエラー | 再試行またはサポートに連絡 |
+
+> 📖 完全なドキュメント：[buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
+
 ---
 
 ## クイックスタート

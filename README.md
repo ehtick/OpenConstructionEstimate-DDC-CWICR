@@ -155,6 +155,11 @@
 - [Collections](#collections) — 9 language collections
 - [Docker Deployment](#docker-deployment) — Self-hosted setup
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — Free REST API for construction pricing
+- [API Endpoints](#api-endpoints) — Search, Languages, Statistics
+- [Code Examples](#api-code-examples) — cURL, Python, JavaScript
+
 ### 🚀 Getting Started
 - [Quick Start - Python](#quick-start) — Tabular data & semantic search
 - [Integration Use Cases](#integration) — Entry to Advanced level
@@ -1424,6 +1429,109 @@ ddc-search --limit 10 "steel beam HEB 300"
 - Removing a language package (`apt remove ddc-cwicr-en`) deletes the collection from Qdrant
 - Purging `ddc-qdrant` (`apt purge ddc-qdrant`) removes all data and the system user
 - Available for `amd64` and `arm64` architectures
+
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/API_Docs-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Auth-None_Required-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cost-Free-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Rate_Limit-60_req/min-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+Free REST API for searching construction work items with full cost breakdown, labor, materials, and equipment data. **55,719 items** across **9 languages** with **84 fields** per item.
+
+**Base URL:** `https://buildcalculator.io/api/v1`
+
+### API Endpoints
+
+#### `GET/POST /api/v1/search` — Search Construction Items
+
+| Parameter | Type | Default | Required | Description |
+|-----------|------|---------|----------|-------------|
+| `q` | string | — | Yes | Search query (min 2 characters). Works in any language |
+| `lang` | string | `en` | No | Database language: `en`, `ru`, `de`, `fr`, `es`, `pt`, `zh`, `ar`, `hi` |
+| `top` | integer | 5 | No | Number of results (1–20) |
+
+#### `GET /api/v1/languages` — List Supported Languages
+
+Returns all available languages with item counts.
+
+#### `GET /api/v1/stats` — Database Statistics
+
+Returns item counts, categories, languages, and metadata.
+
+### API Code Examples
+
+**cURL:**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=concrete+foundation&lang=en&top=5"
+```
+
+**Python:**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "brick masonry walls", "lang": "en", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript:**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=HVAC+ducting&lang=en&top=3"
+);
+const data = await res.json();
+```
+
+**Response example:**
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+**Error codes:**
+
+| Code | Meaning | Action |
+|------|---------|--------|
+| 400 | Missing or invalid query | Check `q` parameter (min 2 chars) |
+| 429 | Rate limit exceeded | Wait and retry (60 req/min) |
+| 500 | Server error | Try again or contact support |
+
+> 📖 Full documentation: [buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
 
 ---
 

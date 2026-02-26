@@ -155,6 +155,11 @@
 - [集合](#集合) — 9个语言集合
 - [Docker部署](#docker-部署) — 自托管设置
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — 免费的建筑定价 REST API
+- [API 端点](#api-端点) — 搜索、语言、统计
+- [代码示例](#api-代码示例) — cURL、Python、JavaScript
+
 ### 入门指南
 - [快速入门 - Python](#快速入门) — 表格数据和语义搜索
 - [集成用例](#集成) — 从入门到高级
@@ -1277,6 +1282,109 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_zh/snapshots/upload" \
 
 # 仪表板：http://localhost:6333/dashboard
 ```
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/API_文档-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/认证-无需认证-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/费用-免费-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/速率限制-60_次/分钟-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+免费的 REST API，用于搜索建筑工程项目，提供完整的成本分解、人工、材料和设备数据。**55,719 个项目**，支持 **9 种语言**，每个项目包含 **84 个字段**。
+
+**基础 URL：** `https://buildcalculator.io/api/v1`
+
+### API 端点
+
+#### `GET/POST /api/v1/search` — 搜索建筑工程项目
+
+| 参数 | 类型 | 默认值 | 必填 | 描述 |
+|------|------|--------|------|------|
+| `q` | string | — | 是 | 搜索查询（最少2个字符）。支持任何语言 |
+| `lang` | string | `en` | 否 | 数据库语言：`en`、`ru`、`de`、`fr`、`es`、`pt`、`zh`、`ar`、`hi` |
+| `top` | integer | 5 | 否 | 返回结果数量（1–20） |
+
+#### `GET /api/v1/languages` — 支持的语言列表
+
+返回所有可用语言及其项目数量。
+
+#### `GET /api/v1/stats` — 数据库统计
+
+返回项目数量、分类、语言和元数据。
+
+### API 代码示例
+
+**cURL：**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=混凝土基础&lang=zh&top=5"
+```
+
+**Python：**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "砖砌墙体", "lang": "zh", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript：**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=屋顶覆盖&lang=zh&top=3"
+);
+const data = await res.json();
+```
+
+**响应示例：**
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+**错误代码：**
+
+| 代码 | 含义 | 操作 |
+|------|------|------|
+| 400 | 查询缺失或无效 | 检查 `q` 参数（最少2个字符） |
+| 429 | 超出速率限制 | 等待后重试（60 次/分钟） |
+| 500 | 服务器错误 | 重试或联系支持 |
+
+> 📖 完整文档：[buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
+
 ---
 
 ## 快速入门

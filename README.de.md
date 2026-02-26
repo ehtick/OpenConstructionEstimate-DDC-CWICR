@@ -155,6 +155,11 @@
 - [Collections](#collections) — 9 Sprach-Collections
 - [Docker-Bereitstellung](#docker-bereitstellung) — Selbst gehostete Einrichtung
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — Kostenlose REST-API für Baupreise
+- [API-Endpunkte](#api-endpunkte) — Suche, Sprachen, Statistiken
+- [Codebeispiele](#api-codebeispiele) — cURL, Python, JavaScript
+
 ### 🚀 Erste Schritte
 - [Schnellstart - Python](#schnellstart) — Tabellarische Daten & semantische Suche
 - [Integrationsanwendungsfälle](#integration) — Einstieg bis Fortgeschritten
@@ -1295,6 +1300,109 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_de/snapshots/upload" \
 
 # Dashboard: http://localhost:6333/dashboard
 ```
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/API_Dokumentation-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Authentifizierung-Nicht_erforderlich-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Kosten-Kostenlos-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Rate_Limit-60_Anf/Min-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+Kostenlose REST-API zur Suche von Baupositionen mit vollständiger Kostenaufschlüsselung, Arbeitsaufwand, Material- und Maschinendaten. **55.719 Positionen** in **9 Sprachen** mit **84 Feldern** pro Position.
+
+**Basis-URL:** `https://buildcalculator.io/api/v1`
+
+### API-Endpunkte
+
+#### `GET/POST /api/v1/search` — Baupositionen suchen
+
+| Parameter | Typ | Standard | Erforderlich | Beschreibung |
+|-----------|-----|----------|-------------|-------------|
+| `q` | string | — | Ja | Suchanfrage (min. 2 Zeichen). Funktioniert in jeder Sprache |
+| `lang` | string | `en` | Nein | Datenbanksprache: `en`, `ru`, `de`, `fr`, `es`, `pt`, `zh`, `ar`, `hi` |
+| `top` | integer | 5 | Nein | Anzahl der Ergebnisse (1–20) |
+
+#### `GET /api/v1/languages` — Unterstützte Sprachen
+
+Gibt alle verfügbaren Sprachen mit Positionsanzahl zurück.
+
+#### `GET /api/v1/stats` — Datenbankstatistiken
+
+Gibt Positionsanzahl, Kategorien, Sprachen und Metadaten zurück.
+
+### API-Codebeispiele
+
+**cURL:**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=Betonfundament&lang=de&top=5"
+```
+
+**Python:**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "Mauerwerk Außenwände", "lang": "de", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript:**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=Dachdeckung&lang=de&top=3"
+);
+const data = await res.json();
+```
+
+**Beispiel-Antwort:**
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+**Fehlercodes:**
+
+| Code | Bedeutung | Maßnahme |
+|------|-----------|----------|
+| 400 | Fehlende oder ungültige Anfrage | `q`-Parameter prüfen (min. 2 Zeichen) |
+| 429 | Rate-Limit überschritten | Warten und erneut versuchen (60 Anf/Min) |
+| 500 | Serverfehler | Erneut versuchen oder Support kontaktieren |
+
+> 📖 Vollständige Dokumentation: [buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
+
 ---
 
 ## Schnellstart

@@ -155,6 +155,11 @@
 - [Collections](#collections) — 9 collections linguistiques
 - [Déploiement Docker](#déploiement-docker) — Configuration auto-hébergée
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — API REST gratuite pour les prix de construction
+- [Points de terminaison API](#points-de-terminaison-api) — Recherche, Langues, Statistiques
+- [Exemples de code](#exemples-de-code-api) — cURL, Python, JavaScript
+
 ### 🚀 Démarrage
 - [Démarrage Rapide - Python](#démarrage-rapide) — Données tabulaires & recherche sémantique
 - [Cas d'Utilisation d'Intégration](#intégration) — Niveau débutant à avancé
@@ -1295,6 +1300,109 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_fr/snapshots/upload" \
 
 # Tableau de bord: http://localhost:6333/dashboard
 ```
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/Documentation_API-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Authentification-Non_requise-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Coût-Gratuit-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Limite-60_req/min-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+API REST gratuite pour rechercher des postes de construction avec ventilation complète des coûts, main-d'œuvre, matériaux et équipements. **55 719 postes** dans **9 langues** avec **84 champs** par poste.
+
+**URL de base :** `https://buildcalculator.io/api/v1`
+
+### Points de terminaison API
+
+#### `GET/POST /api/v1/search` — Rechercher des postes de construction
+
+| Paramètre | Type | Défaut | Requis | Description |
+|-----------|------|--------|--------|-------------|
+| `q` | string | — | Oui | Requête de recherche (min. 2 caractères). Fonctionne dans toutes les langues |
+| `lang` | string | `en` | Non | Langue de la base : `en`, `ru`, `de`, `fr`, `es`, `pt`, `zh`, `ar`, `hi` |
+| `top` | integer | 5 | Non | Nombre de résultats (1–20) |
+
+#### `GET /api/v1/languages` — Langues supportées
+
+Retourne toutes les langues disponibles avec le nombre de postes.
+
+#### `GET /api/v1/stats` — Statistiques de la base de données
+
+Retourne le nombre de postes, catégories, langues et métadonnées.
+
+### Exemples de code API
+
+**cURL :**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=fondation+béton&lang=fr&top=5"
+```
+
+**Python :**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "maçonnerie murs extérieurs", "lang": "fr", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript :**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=couverture+toiture&lang=fr&top=3"
+);
+const data = await res.json();
+```
+
+**Exemple de réponse :**
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+**Codes d'erreur :**
+
+| Code | Signification | Action |
+|------|--------------|--------|
+| 400 | Requête manquante ou invalide | Vérifier le paramètre `q` (min. 2 caractères) |
+| 429 | Limite de requêtes dépassée | Attendre et réessayer (60 req/min) |
+| 500 | Erreur serveur | Réessayer ou contacter le support |
+
+> 📖 Documentation complète : [buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
+
 ---
 
 ## Démarrage Rapide

@@ -155,6 +155,11 @@
 - [Coleções](#coleções) — 9 coleções de idiomas
 - [Deploy com Docker](#deploy-com-docker) — Configuração auto-hospedada
 
+### 🌐 API
+- [Pricing Search API](#-pricing-search-api--buildcalculatorio) — API REST gratuita para preços de construção
+- [Endpoints da API](#endpoints-da-api) — Pesquisa, Idiomas, Estatísticas
+- [Exemplos de código](#exemplos-de-código-api) — cURL, Python, JavaScript
+
 ### Primeiros Passos
 - [Início Rápido - Python](#início-rápido) — Dados tabulares e busca semântica
 - [Casos de Uso de Integração](#integração) — Nível Iniciante ao Avançado
@@ -1277,6 +1282,109 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_en/snapshots/upload" \
 
 # Dashboard: http://localhost:6333/dashboard
 ```
+---
+
+## 🌐 Pricing Search API — BuildCalculator.io
+
+<p align="center">
+  <a href="https://buildcalculator.io/api-docs/">
+    <img src="https://img.shields.io/badge/Documentação_API-buildcalculator.io-2563eb?style=for-the-badge" alt="API Docs">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Autenticação-Não_necessária-059669?style=for-the-badge" alt="No Auth">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Custo-Gratuito-059669?style=for-the-badge" alt="Free">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Limite-60_req/min-d97706?style=for-the-badge" alt="Rate Limit">
+</p>
+
+API REST gratuita para pesquisar itens de obra com detalhamento completo de custos, mão de obra, materiais e equipamentos. **55.719 itens** em **9 idiomas** com **84 campos** por item.
+
+**URL base:** `https://buildcalculator.io/api/v1`
+
+### Endpoints da API
+
+#### `GET/POST /api/v1/search` — Pesquisar itens de obra
+
+| Parâmetro | Tipo | Padrão | Obrigatório | Descrição |
+|-----------|------|--------|-------------|-----------|
+| `q` | string | — | Sim | Consulta de pesquisa (mín. 2 caracteres). Funciona em qualquer idioma |
+| `lang` | string | `en` | Não | Idioma do banco: `en`, `ru`, `de`, `fr`, `es`, `pt`, `zh`, `ar`, `hi` |
+| `top` | integer | 5 | Não | Número de resultados (1–20) |
+
+#### `GET /api/v1/languages` — Idiomas suportados
+
+Retorna todos os idiomas disponíveis com contagem de itens.
+
+#### `GET /api/v1/stats` — Estatísticas do banco de dados
+
+Retorna contagem de itens, categorias, idiomas e metadados.
+
+### Exemplos de código API
+
+**cURL:**
+```bash
+curl "https://buildcalculator.io/api/v1/search?q=fundação+concreto&lang=pt&top=5"
+```
+
+**Python:**
+```python
+import requests
+
+response = requests.get("https://buildcalculator.io/api/v1/search",
+    params={"q": "alvenaria paredes externas", "lang": "pt", "top": 5})
+data = response.json()
+
+for item in data["results"]:
+    print(f"{item['name']} — {item['pricing']['total_per_unit']} EUR/{item['unit']}")
+```
+
+**JavaScript:**
+```javascript
+const res = await fetch(
+  "https://buildcalculator.io/api/v1/search?q=cobertura+telhado&lang=pt&top=3"
+);
+const data = await res.json();
+```
+
+**Exemplo de resposta:**
+```json
+{
+  "query": "concrete foundation",
+  "language": "en",
+  "results_count": 5,
+  "results": [
+    {
+      "rate_code": "KANE_KAME_KAKAME_KAMECON",
+      "name": "Concrete preparation device",
+      "unit": "m3",
+      "currency": "EUR",
+      "pricing": {
+        "total_per_unit": 167.51,
+        "labor_per_unit": 18.80,
+        "material_per_unit": 142.92,
+        "equipment_per_unit": 4.80
+      },
+      "cost_breakdown": {
+        "labor_pct": 11.3,
+        "material_pct": 85.8,
+        "equipment_pct": 2.9
+      }
+    }
+  ]
+}
+```
+
+**Códigos de erro:**
+
+| Código | Significado | Ação |
+|--------|-----------|------|
+| 400 | Consulta ausente ou inválida | Verificar parâmetro `q` (mín. 2 caracteres) |
+| 429 | Limite de requisições excedido | Aguardar e tentar novamente (60 req/min) |
+| 500 | Erro do servidor | Tentar novamente ou contatar suporte |
+
+> 📖 Documentação completa: [buildcalculator.io/api-docs](https://buildcalculator.io/api-docs/)
+
 ---
 
 ## Início Rápido
