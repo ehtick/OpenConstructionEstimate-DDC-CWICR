@@ -19,8 +19,8 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Partidas-55.719-2563eb?style=for-the-badge" alt="Partidas">
   <img src="https://img.shields.io/badge/Recursos-27.672-059669?style=for-the-badge" alt="Recursos">
-  <img src="https://img.shields.io/badge/Idiomas-9-d97706?style=for-the-badge" alt="Idiomas">
-  <img src="https://img.shields.io/badge/Países-10+-dc2626?style=for-the-badge" alt="Países">
+  <img src="https://img.shields.io/badge/Idiomas-11-d97706?style=for-the-badge" alt="Idiomas">
+  <img src="https://img.shields.io/badge/Países-12+-dc2626?style=for-the-badge" alt="Países">
 </div>
 
 <div align="center">
@@ -152,7 +152,7 @@
 ### 🔍 Base de Datos Vectorial
 - [Base de Datos Vectorial](#base-de-datos-vectorial) — Búsqueda semántica con Qdrant
 - [Releases](#releases) — Descargar snapshots
-- [Colecciones](#colecciones) — 9 colecciones por idioma
+- [Colecciones](#colecciones) — 11 colecciones por idioma
 - [Despliegue Docker](#despliegue-docker) — Configuración auto-alojada
 
 ### 🌐 API
@@ -189,7 +189,7 @@ DDC CWICR no es solo una base de datos — es **combustible listo para usar en a
 |----------------|-----------|
 | **Embeddings precalculados** | No necesitas generar vectores — la búsqueda semántica funciona al instante |
 | **Esquema estructurado de 85 campos** | La IA puede razonar sobre relaciones de datos y dar respuestas precisas |
-| **9 idiomas incluidos** | Construye aplicaciones multilingües sin esfuerzo de traducción |
+| **11 idiomas incluidos** | Construye aplicaciones multilingües sin esfuerzo de traducción |
 | **55.000+ partidas de trabajo** | Cobertura completa para cualquier tarea de estimación de construcción |
 | **Metodología basada en recursos** | Datos transparentes que la IA puede explicar y desglosar |
 
@@ -430,7 +430,7 @@ Sin importar qué herramienta IA elijas, DDC CWICR permite:
 | **Benchmarking de Precios** | Comparar costos entre regiones e idiomas |
 | **Planificación de Recursos** | Calcular horas de trabajo, materiales y necesidades de equipo |
 | **Análisis de Inversión** | Auditorías profundas de costos con transparencia total de recursos |
-| **Soporte Multilingüe** | Servir usuarios en 9 idiomas con precios localizados |
+| **Soporte Multilingüe** | Servir usuarios en 11 idiomas con precios localizados |
 | **Integración BIM** | Conectar con Revit/IFC para estimación 4D/5D automatizada |
 | **Entrenar Modelos IA** | Usar datos estructurados para fine-tuning de IA de construcción |
 
@@ -504,9 +504,9 @@ erDiagram
     LABOR {
         string resource_code FK
         float labor_hours_workers "172"
-        float labor_hours_machinists "1.67"
+        float labor_hours_operators "1.67"
         int count_workers_per_unit "172"
-        int count_machinists_per_unit "2"
+        int count_operators_per_unit "2"
         float cost_of_working_hours "3088.11"
     }
 
@@ -514,7 +514,7 @@ erDiagram
         string machine_class2_name "Grúas"
         string machine_class3_name "Grúas sobre ruedas"
         float electricity_consumption_kwh "0.23"
-        float price_machinist_wages "13.56"
+        float price_operator_wages "13.56"
         float total_value_machinery "64.18"
     }
 
@@ -542,9 +542,9 @@ Los 85 campos de la base de datos están organizados en grupos lógicos que refl
 
 **Recursos** - `resource_code`, `resource_name`, `resource_unit`, `resource_quantity`, `parameter_resource_quantity`, `resource_price_per_unit_eur_current`, `resource_cost_eur`
 
-**Mano de Obra** - `count_workers_per_unit`, `count_engineers_per_unit`, `count_machinists_per_unit`, `count_total_people_per_unit`, `labor_hours_construction_workers`, `labor_hours_machinists`, `labor_hours_engineers`, `total_labor_hours_workers_machinists`, `total_labor_hours_all_personnel`, `cost_of_working_hours`, `count_people_per_day`
+**Mano de Obra** - `count_workers_per_unit`, `count_engineers_per_unit`, `count_operators_per_unit`, `count_total_people_per_unit`, `labor_hours_construction_workers`, `labor_hours_operators`, `labor_hours_engineers`, `total_labor_hours_workers_operators`, `total_labor_hours_all_personnel`, `cost_of_working_hours`, `count_people_per_day`
 
-**Maquinaria** - `machine_class2_name`, `machine_class3_name`, `personnel_machinist_code`, `personnel_machinist_grade`, `price_machinist_wages`, `price_relocation_included`, `price_cost_without_wages`, `electricity_consumption_kwh_per_machine_hour`, `electricity_cost_per_unit`, `electricity_cost_total_sum`, `cost_machinist_sum`, `total_value_machinery_equipment`
+**Maquinaria** - `machine_class2_name`, `machine_class3_name`, `personnel_operator_code`, `personnel_operator_grade`, `price_operator_wages`, `price_relocation_included`, `price_cost_without_wages`, `electricity_consumption_kwh_per_machine_hour`, `electricity_cost_per_unit`, `electricity_cost_total_sum`, `cost_operator_sum`, `total_value_machinery_equipment`
 
 **Variantes de Precio** - `price_code_prefix`, `price_abstract_resource_common_start`, `price_abstract_resource_variable_parts`, `price_abstract_resource_position_count`, `price_abstract_resource_est_price_min`, `price_abstract_resource_est_price_max`, `price_abstract_resource_est_price_mean`, `price_abstract_resource_est_price_median`, `price_abstract_resource_unit`, `abstract_resource_tech_group`
 
@@ -586,7 +586,7 @@ flowchart TB
     subgraph Processing["⚙️ Pipeline de Procesamiento"]
         direction LR
         ETL[["🔄 ETL<br/>Extracción &<br/>Transformación"]]
-        TRANS[["🌐 Traducción<br/>9 Idiomas"]]
+        TRANS[["🌐 Traducción<br/>11 Idiomas"]]
         EMBED[["🧠 Vectorización<br/>OpenAI 3072d"]]
         ETL --> TRANS --> EMBED
     end
@@ -738,7 +738,7 @@ flowchart LR
 | 💬 Entrada lenguaje natural | Acepta cualquier formato de texto — listas, oraciones, descripciones estructuradas |
 | 🤖 Soporte multi-LLM     | Funciona con OpenAI, Claude o Gemini (intercambiable)                |
 | 🔍 Búsqueda semántica    | Encuentra mejores coincidencias incluso con diferente redacción      |
-| 🌍 9 idiomas             | DE, EN, RU, ES, FR, PT, ZH, AR, HI                                   |
+| 🌍 11 idiomas             | DE, EN, RU, ES, FR, PT, ZH, AR, HI, US, UK                                   |
 | 📊 Múltiples exportaciones | Informe HTML, hoja Excel, documento PDF                             |
 | ✏️ Edición interactiva   | Modifica cantidades antes del cálculo final                          |
 
@@ -965,7 +965,7 @@ flowchart TB
 | 🔍 Reranking IA       | Mejora precisión de coincidencias                  |
 | ✏️ Edición completa   | Añadir, eliminar, modificar partidas               |
 | 📊 Export multi-formato| HTML, Excel, PDF                                  |
-| 🌍 9 idiomas          | Localización completa                              |
+| 🌍 11 idiomas          | Localización completa                              |
 
 **Credenciales requeridas:**
 - Token Bot Telegram
@@ -1151,6 +1151,8 @@ environment:
 | `PT`   | Portugués   | São Paulo       | BRL     | `ddc_cwicr_pt`      |
 | `RU`   | Ruso        | San Petersburgo | RUB     | `ddc_cwicr_ru`      |
 | `ZH`   | Chino       | Shanghai        | CNY     | `ddc_cwicr_zh`      |
+| `US`   | Inglés      | USA             | USD     | `ddc_cwicr_us`      |
+| `UK`   | Inglés      | UK              | GBP     | `ddc_cwicr_uk`      |
 
 ---
 
@@ -1263,7 +1265,7 @@ Descarga conjuntos de datos QDRANT y CSV (archivos mayores de 1 gigabyte) de [Gi
 
 ### Colecciones
 
-🇸🇦 `ddc_cwicr_ar` (Árabe) · 🇨🇳 `ddc_cwicr_zh` (Chino) · 🇩🇪 `ddc_cwicr_de` (Alemán) · 🇬🇧 `ddc_cwicr_en` (Inglés) · 🇪🇸 `ddc_cwicr_es` (Español) · 🇫🇷 `ddc_cwicr_fr` (Francés) · 🇮🇳 `ddc_cwicr_hi` (Hindi) · 🇧🇷 `ddc_cwicr_pt` (Portugués) · 🇷🇺 `ddc_cwicr_ru` (Ruso)
+🇸🇦 `ddc_cwicr_ar` (Árabe) · 🇨🇳 `ddc_cwicr_zh` (Chino) · 🇩🇪 `ddc_cwicr_de` (Alemán) · 🇬🇧 `ddc_cwicr_en` (Inglés) · 🇪🇸 `ddc_cwicr_es` (Español) · 🇫🇷 `ddc_cwicr_fr` (Francés) · 🇮🇳 `ddc_cwicr_hi` (Hindi) · 🇧🇷 `ddc_cwicr_pt` (Portugués) · 🇷🇺 `ddc_cwicr_ru` (Ruso) · 🇺🇸 `ddc_cwicr_us` (USA) · 🇬🇧 `ddc_cwicr_uk` (UK)
 
 Cada colección contiene **55,719 vectores** con metadatos de payload completos.
 
@@ -1316,7 +1318,7 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_es/snapshots/upload" \
   <img src="https://img.shields.io/badge/Límite-60_sol/min-d97706?style=for-the-badge" alt="Rate Limit">
 </p>
 
-API REST gratuita para buscar partidas de construcción con desglose completo de costos, mano de obra, materiales y equipos. **55.719 partidas** en **9 idiomas** con **84 campos** por partida.
+API REST gratuita para buscar partidas de construcción con desglose completo de costos, mano de obra, materiales y equipos. **55.719 partidas** en **11 idiomas** con **84 campos** por partida.
 
 **URL base:** `https://buildcalculator.io/api/v1`
 
@@ -1522,7 +1524,7 @@ La carpeta `AI_INSTRUCTIONS/` contiene documentación completa para asistentes d
 - **55,719 partidas de trabajo** — operaciones de construcción detalladas con desglose completo de costos
 - **27,672 recursos** — materiales, mano de obra y equipo con precios regionales
 - **85 campos de datos** — esquema estructurado para cálculos precisos de costos
-- **9 idiomas** — con precios específicos por región (EUR, USD, CAD, RUB, CNY, etc.)
+- **11 idiomas** — con precios específicos por región (EUR, USD, CAD, RUB, CNY, etc.)
 - **Embeddings precalculados** — vectores OpenAI de 3072 dimensiones para búsqueda semántica
 
 ### Metodología Basada en Recursos

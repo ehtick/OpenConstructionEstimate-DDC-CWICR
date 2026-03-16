@@ -22,7 +22,7 @@ DDC CWICR数据库（Construction Work Items, Components & Resources）是一项
 
 ## 数据来源
 
-DDC CWICR基于欧亚国家公开可用的官方建筑成本标准。该数据库是与来自不同国家的预算员和建筑专家密切合作开发的，这使我们能够考虑到数据工作的实际方面。数据已被系统化为统一结构，在方法论上进行了协调，并以9种语言版本和9种区域定价版本提供国际使用。
+DDC CWICR基于欧亚国家公开可用的官方建筑成本标准。该数据库是与来自不同国家的预算员和建筑专家密切合作开发的，这使我们能够考虑到数据工作的实际方面。数据已被系统化为统一结构，在方法论上进行了协调，并以11种语言版本和11种区域定价版本提供国际使用。
 
 ## 历史发展
 
@@ -65,12 +65,12 @@ resource_code、resource_name、resource_unit、resource_quantity、resource_pri
 ### 劳动力
 *11列*
 
-count_workers/engineers/machinists、按类别的labor_hours、cost_of_working_hours
+count_workers/engineers/operators、按类别的labor_hours、cost_of_working_hours
 
 ### 机械设备
 *12列*
 
-machine_class、personnel_machinist_grade、electricity_consumption_kwh、electricity_cost
+machine_class、personnel_operator_grade、electricity_consumption_kwh、electricity_cost
 
 ### 价格变体
 *16列*
@@ -140,7 +140,7 @@ mass_name、mass_value、mass_unit
 
 ## 语言版本
 
-文档提供9种语言版本：
+文档提供11种语言版本：
 
 - **阿拉伯语 / العربية** (迪拜) — 中东
 - **中文** (上海) — 东亚

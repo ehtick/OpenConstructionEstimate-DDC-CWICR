@@ -27,7 +27,7 @@ A base de dados DDC CWICR (Construction Work Items, Components & Resources) é u
 FONTES DE DADOS
 ------------------------------------------------------------------------------
 
-O DDC CWICR é construído com base em padrões oficiais de custos de construção de países eurasiáticos que estão disponíveis publicamente. A base de dados foi desenvolvida em estreita colaboração com orçamentistas e especialistas em construção de diferentes países, o que nos permitiu levar em conta aspectos práticos do trabalho com dados. Os dados foram sistematizados numa estrutura unificada, harmonizados metodologicamente e apresentados em 9 versões linguísticas e 9 versões de preços regionais para uso internacional.
+O DDC CWICR é construído com base em padrões oficiais de custos de construção de países eurasiáticos que estão disponíveis publicamente. A base de dados foi desenvolvida em estreita colaboração com orçamentistas e especialistas em construção de diferentes países, o que nos permitiu levar em conta aspectos práticos do trabalho com dados. Os dados foram sistematizados numa estrutura unificada, harmonizados metodologicamente e apresentados em 11 versões linguísticas e 11 versões de preços regionais para uso internacional.
 
 
 DESENVOLVIMENTO HISTÓRICO
@@ -74,11 +74,11 @@ Recursos
 
 Mão de obra
   11 colunas
-  count_workers/engineers/machinists, labor_hours por categoria, cost_of_working_hours
+  count_workers/engineers/operators, labor_hours por categoria, cost_of_working_hours
 
 Máquinas e equipamentos
   12 colunas
-  machine_class, personnel_machinist_grade, electricity_consumption_kwh, electricity_cost
+  machine_class, personnel_operator_grade, electricity_consumption_kwh, electricity_cost
 
 Variantes de preço
   16 colunas
@@ -168,7 +168,7 @@ Com base no DDC CWICR, pode construir pipelines e fluxos de trabalho automatizad
 VERSÕES LINGUÍSTICAS
 ------------------------------------------------------------------------------
 
-A documentação está disponível em 9 idiomas:
+A documentação está disponível em 11 idiomas:
 
 * Árabe / العربية (Dubai) - Médio Oriente
 * Chinês / 中文 (Xangai) - Ásia Oriental

@@ -27,7 +27,7 @@ The DDC CWICR database (Construction Work Items, Components & Resources) is an a
 DATA SOURCES
 ------------------------------------------------------------------------------
 
-DDC CWICR is built on official construction cost standards from Eurasian countries that are publicly available. The database was developed in close collaboration with estimators and construction specialists from different countries, which allowed us to take into account practical aspects of working with data. The data has been systematized into a unified structure, harmonized methodologically, and presented in 9 language versions and 9 regional pricing versions for international use.
+DDC CWICR is built on official construction cost standards from Eurasian countries that are publicly available. The database was developed in close collaboration with estimators and construction specialists from different countries, which allowed us to take into account practical aspects of working with data. The data has been systematized into a unified structure, harmonized methodologically, and presented in 11 language versions and 11 regional pricing versions for international use.
 
 
 HISTORICAL DEVELOPMENT
@@ -74,11 +74,11 @@ Resources
 
 Labor
   11 columns
-  count_workers/engineers/machinists, labor_hours by category, cost_of_working_hours
+  count_workers/engineers/operators, labor_hours by category, cost_of_working_hours
 
 Machinery & Equipment
   12 columns
-  machine_class, personnel_machinist_grade, electricity_consumption_kwh, electricity_cost
+  machine_class, personnel_operator_grade, electricity_consumption_kwh, electricity_cost
 
 Price Variants
   16 columns
@@ -168,7 +168,7 @@ Based on DDC CWICR, you can build automated pipelines and workflows for integrat
 LANGUAGE VERSIONS
 ------------------------------------------------------------------------------
 
-Documentation is available in 9 languages:
+Documentation is available in 11 languages:
 
 * Arabic / العربية (Dubai) - Middle East
 * Chinese / 中文 (Shanghai) - East Asia

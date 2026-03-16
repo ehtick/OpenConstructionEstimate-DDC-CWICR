@@ -7,7 +7,7 @@
 Open-source construction cost database optimized for AI/ML workflows:
 - **55,719 work items** with 85 data fields
 - **27,672 resources** (materials, labor, equipment)
-- **9 languages** with regional pricing
+- **11 languages** with regional pricing
 - **Pre-computed OpenAI embeddings** (3072 dimensions)
 - **Qdrant vector database** ready
 
@@ -203,6 +203,8 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_en/snapshots/upload" \
 | Arabic | `ddc_cwicr_ar` | Dubai |
 | Portuguese | `ddc_cwicr_pt` | São Paulo |
 | Hindi | `ddc_cwicr_hi` | Mumbai |
+| English (USA) | `ddc_cwicr_us` | USA |
+| English (UK) | `ddc_cwicr_uk` | UK |
 
 ## n8n Workflows
 

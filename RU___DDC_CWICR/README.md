@@ -22,7 +22,7 @@
 
 ## Источники данных
 
-Основу DDC CWICR составляют официальные сметные нормативы стран Евразийского континента, находящиеся в открытом доступе. База данных разрабатывалась в тесном взаимодействии со сметчиками и строительными специалистами из разных стран, что позволило учесть практические аспекты работы с данными. Данные систематизированы в единую структуру, гармонизированы по методологии и представлены в 9 языковых и 9 региональных ценовых версиях для международного применения.
+Основу DDC CWICR составляют официальные сметные нормативы стран Евразийского континента, находящиеся в открытом доступе. База данных разрабатывалась в тесном взаимодействии со сметчиками и строительными специалистами из разных стран, что позволило учесть практические аспекты работы с данными. Данные систематизированы в единую структуру, гармонизированы по методологии и представлены в 11 языковых и 11 региональных ценовых версиях для международного применения.
 
 ## Историческое развитие
 
@@ -65,12 +65,12 @@ resource_code, resource_name, resource_unit, resource_quantity, resource_price_p
 ### Труд
 *11 колонок*
 
-count_workers/engineers/machinists, labor_hours по категориям, cost_of_working_hours
+count_workers/engineers/operators, labor_hours по категориям, cost_of_working_hours
 
 ### Машины и механизмы
 *12 колонок*
 
-machine_class, personnel_machinist_grade, electricity_consumption_kwh, electricity_cost
+machine_class, personnel_operator_grade, electricity_consumption_kwh, electricity_cost
 
 ### Варианты цен
 *16 колонок*
@@ -140,12 +140,14 @@ mass_name, mass_value, mass_unit
 
 ## Языковые версии
 
-Документация доступна на 9 языках:
+Документация доступна на 11 языках:
 
 - **Arabic / العربية** (Dubai) — Middle East
 - **Chinese / 中文** (Shanghai) — East Asia
 - **Deutsch** (Berlin) — Central Europe
 - **English** (Toronto) — North America
+- **English** (USA) — United States
+- **English** (UK) — United Kingdom
 - **Español** (Barcelona) — Iberia
 - **Français** (Paris) — Western Europe
 - **Hindi / हिन्दी** (Mumbai) — South Asia

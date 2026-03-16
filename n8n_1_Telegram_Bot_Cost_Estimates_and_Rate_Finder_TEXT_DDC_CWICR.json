@@ -3,7 +3,7 @@
   "nodes": [
     {
       "parameters": {
-        "content": "⭐ **Star us on GitHub!**\n\n[github.com/datadrivenconstruction/DDC-CWICR](https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR)\n\n**DDC CWICR** — Open Source Construction Cost Database\n- 55,000+ work items\n- 9 languages\n- Free forever",
+        "content": "⭐ **Star us on GitHub!**\n\n[github.com/datadrivenconstruction/DDC-CWICR](https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR)\n\n**DDC CWICR** — Open Source Construction Cost Database\n- 55,000+ work items\n- 11 languages\n- Free forever",
         "height": 132,
         "width": 404
       },
@@ -49,7 +49,7 @@
     },
     {
       "parameters": {
-        "content": "## 🚀 DDC CWICR Text Estimator\n### Construction Cost Estimation Bot\n\n**Version:** 11.0 AI Nodes\n**Author:** DataDrivenConstruction.io\n\n**All AI via n8n Credentials:**\n- 🤖 Parse Text (OpenAI/Claude/Gemini)\n- 🤖 Transform Query\n- 🤖 Rerank Results\n- 📊 Embeddings (OpenAI)\n\n**Features:**\n- 💬 Text input\n- 🌍 9 languages\n- 🔍 Vector search\n- 📊 HTML/Excel/PDF\n\n**No API keys in code!**\nUse n8n Credentials only.",
+        "content": "## 🚀 DDC CWICR Text Estimator\n### Construction Cost Estimation Bot\n\n**Version:** 11.0 AI Nodes\n**Author:** DataDrivenConstruction.io\n\n**All AI via n8n Credentials:**\n- 🤖 Parse Text (OpenAI/Claude/Gemini)\n- 🤖 Transform Query\n- 🤖 Rerank Results\n- 📊 Embeddings (OpenAI)\n\n**Features:**\n- 💬 Text input\n- 🌍 11 languages\n- 🔍 Vector search\n- 📊 HTML/Excel/PDF\n\n**No API keys in code!**\nUse n8n Credentials only.",
         "height": 440,
         "width": 318
       },
@@ -137,7 +137,7 @@
     },
     {
       "parameters": {
-        "content": "## 🌐 Config & Localization\n\n**9 Languages:**\nDE, EN, RU, ES, FR, PT, ZH, AR, HI\n\n**Contains:**\n- UI messages (buttons, prompts)\n- Currency symbols (€/$₽¥)\n- Database mapping\n- Search language names\n\n**Auto-selects:**\n- Qdrant collection by language\n- Currency by region\n- UI text localization\n\n**Customizable:**\n- Add new languages in LANG object\n- Modify button labels\n- Change currency defaults",
+        "content": "## 🌐 Config & Localization\n\n**11 Languages:**\nDE, EN, RU, ES, FR, PT, ZH, AR, HI, US, UK\n\n**Contains:**\n- UI messages (buttons, prompts)\n- Currency symbols (€/$₽¥)\n- Database mapping\n- Search language names\n\n**Auto-selects:**\n- Qdrant collection by language\n- Currency by region\n- UI text localization\n\n**Customizable:**\n- Add new languages in LANG object\n- Modify button labels\n- Change currency defaults",
         "height": 808,
         "width": 220,
         "color": 5
@@ -634,7 +634,7 @@
         "url": "=https://api.telegram.org/bot{{ $('🔑 TOKEN').first().json.bot_token }}/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"chat_id\": {{ $json.chatId }},\n  \"text\": \"*DDC CWICR - Help*\\n\\n*What is DDC CWICR?*\\nOpen source construction cost database\\nhttps://DataDrivenConstruction.io\\n\\n*Features:*\\n📸 Photo analysis with AI\\n📝 Text input with work lists\\n🌍 9 languages supported\\n📊 55,000+ work items\\n💰 Regional pricing (EUR, USD, RUB, etc.)\\n📄 Excel & PDF export\\n\\n*How to use:*\\n1. Select your language\\n2. Send photo OR text description\\n3. Edit detected works if needed\\n4. Get cost estimate\\n\\n*Commands:*\\n/start - New estimate\\n\\n*Contact:*\\nGitHub: github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [[{\"text\": \"◀️ Back\", \"callback_data\": \"back_to_lang\"}]]\n  }\n}",
+        "jsonBody": "={\n  \"chat_id\": {{ $json.chatId }},\n  \"text\": \"*DDC CWICR - Help*\\n\\n*What is DDC CWICR?*\\nOpen source construction cost database\\nhttps://DataDrivenConstruction.io\\n\\n*Features:*\\n📸 Photo analysis with AI\\n📝 Text input with work lists\\n🌍 11 languages supported\\n📊 55,000+ work items\\n💰 Regional pricing (EUR, USD, RUB, etc.)\\n📄 Excel & PDF export\\n\\n*How to use:*\\n1. Select your language\\n2. Send photo OR text description\\n3. Edit detected works if needed\\n4. Get cost estimate\\n\\n*Commands:*\\n/start - New estimate\\n\\n*Contact:*\\nGitHub: github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [[{\"text\": \"◀️ Back\", \"callback_data\": \"back_to_lang\"}]]\n  }\n}",
         "options": {}
       },
       "id": "1b9da534-f7af-4bb6-b8ab-7b43749584db",
@@ -969,7 +969,7 @@
         "url": "=https://api.telegram.org/bot{{ $('🔑 TOKEN').first().json.bot_token }}/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"chat_id\": {{ $json.chatId }},\n  \"text\": \"*DDC CWICR Cost Estimator*\\nhttps://DataDrivenConstruction.io\\n\\n▸ Photo analysis (up to 4)\\n▸ Text description\\n▸ 9 languages · 55,000+ work items\\n▸ Excel & PDF export\\n\\nSelect language:\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🇩🇪 Deutsch\", \"callback_data\": \"lang_DE\"}, {\"text\": \"🇬🇧 English\", \"callback_data\": \"lang_EN\"}, {\"text\": \"🇷🇺 Русский\", \"callback_data\": \"lang_RU\"}],\n      [{\"text\": \"🇪🇸 Español\", \"callback_data\": \"lang_ES\"}, {\"text\": \"🇫🇷 Français\", \"callback_data\": \"lang_FR\"}, {\"text\": \"🇧🇷 Português\", \"callback_data\": \"lang_PT\"}],\n      [{\"text\": \"🇨🇳 中文\", \"callback_data\": \"lang_ZH\"}, {\"text\": \"🇦🇪 العربية\", \"callback_data\": \"lang_AR\"}, {\"text\": \"🇮🇳 हिन्दी\", \"callback_data\": \"lang_HI\"}],\n      [{\"text\": \"❓ Help\", \"callback_data\": \"show_help\"}]\n    ]\n  }\n}",
+        "jsonBody": "={\n  \"chat_id\": {{ $json.chatId }},\n  \"text\": \"*DDC CWICR Cost Estimator*\\nhttps://DataDrivenConstruction.io\\n\\n▸ Photo analysis (up to 4)\\n▸ Text description\\n▸ 11 languages · 55,000+ work items\\n▸ Excel & PDF export\\n\\nSelect language:\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🇩🇪 Deutsch\", \"callback_data\": \"lang_DE\"}, {\"text\": \"🇬🇧 English\", \"callback_data\": \"lang_EN\"}, {\"text\": \"🇷🇺 Русский\", \"callback_data\": \"lang_RU\"}],\n      [{\"text\": \"🇪🇸 Español\", \"callback_data\": \"lang_ES\"}, {\"text\": \"🇫🇷 Français\", \"callback_data\": \"lang_FR\"}, {\"text\": \"🇧🇷 Português\", \"callback_data\": \"lang_PT\"}],\n      [{\"text\": \"🇨🇳 中文\", \"callback_data\": \"lang_ZH\"}, {\"text\": \"🇦🇪 العربية\", \"callback_data\": \"lang_AR\"}, {\"text\": \"🇮🇳 हिन्दी\", \"callback_data\": \"lang_HI\"}],\n      [{\"text\": \"❓ Help\", \"callback_data\": \"show_help\"}]\n    ]\n  }\n}",
         "options": {}
       },
       "id": "dc1f5a37-6590-433d-adba-e59843e63aa0",
@@ -1340,7 +1340,9 @@
     },
     {
       "parameters": {
-        "content": "## 🔍 Qdrant Vector DB\n\n**Collections (9 languages):**\n- `DDC_CWICR_DE` — German\n- `DDC_CWICR_EN` — English\n- `DDC_CWICR_RU` — Russian\n- `DDC_CWICR_ES` — Spanish\n- `DDC_CWICR_FR` — French\n- `DDC_CWICR_PT` — Portuguese\n- `DDC_CWICR_ZH` — Chinese\n- `DDC_CWICR_AR` — Arabic\n- `DDC_CWICR_HI` — Hindi\n\n**Setup:**\n1. Install Qdrant\n2. Load collections from DDC repo\n3. Configure QDRANT_URL\n\n**Each collection:** ~55,000 vectors",
+        "content": "## 🔍 Qdrant Vector DB\n\n**Collections (11 languages):**\n- `DDC_CWICR_DE` — German\n- `DDC_CWICR_EN` — English\n- `DDC_CWICR_RU` — Russian\n- `DDC_CWICR_ES` — Spanish\n- `DDC_CWICR_FR` — French\n- `DDC_CWICR_PT` — Portuguese\n- `DDC_CWICR_ZH` — Chinese\n- `DDC_CWICR_AR` — Arabic\n- `DDC_CWICR_HI` — Hindi
+- `DDC_CWICR_US` — English (USA)
+- `DDC_CWICR_UK` — English (UK)\n\n**Setup:**\n1. Install Qdrant\n2. Load collections from DDC repo\n3. Configure QDRANT_URL\n\n**Each collection:** ~55,000 vectors",
         "height": 528,
         "width": 380
       },

@@ -7,7 +7,7 @@
 **DDC CWICR** is an open-source construction cost database with:
 - 55,719 work items (строительные работы)
 - 27,672 resources (materials, labor, equipment)
-- 9 languages with regional pricing
+- 11 languages with regional pricing
 - Pre-computed OpenAI embeddings (3072d) for semantic search
 - Qdrant vector database integration
 
@@ -140,6 +140,8 @@ print(f"  TOTAL: {item['total_cost_per_position']}")
 | `ddc_cwicr_hi` | Hindi | Mumbai | INR |
 | `ddc_cwicr_pt` | Portuguese | São Paulo | BRL |
 | `ddc_cwicr_ru` | Russian | St. Petersburg | RUB |
+| `ddc_cwicr_us` | English | USA | USD |
+| `ddc_cwicr_uk` | English | UK | GBP |
 
 ## n8n Workflows
 

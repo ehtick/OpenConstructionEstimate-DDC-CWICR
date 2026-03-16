@@ -59,10 +59,10 @@ The DDC CWICR database contains **55,719 work items** with **85 fields** organiz
 | `labor_hours` | FLOAT | Labor hours per unit |
 | `labor_hourly_rate` | FLOAT | Hourly wage rate |
 | `labor_total_cost` | FLOAT | Total labor cost |
-| `machinist_worker_count` | INT | Machinist count |
-| `machinist_hours` | FLOAT | Machinist hours |
-| `machinist_hourly_rate` | FLOAT | Machinist rate |
-| `machinist_total_cost` | FLOAT | Machinist total |
+| `operator_worker_count` | INT | Operator count |
+| `operator_hours` | FLOAT | Operator hours |
+| `operator_hourly_rate` | FLOAT | Operator rate |
+| `operator_total_cost` | FLOAT | Operator total |
 
 ### 5. Equipment/Machinery (12 fields)
 
@@ -150,7 +150,7 @@ Total Cost = Materials + Labor + Equipment + Overhead + Profit + VAT
 
 Where:
 - Materials = Σ(material_quantity × material_unit_cost)
-- Labor = labor_hours × labor_hourly_rate + machinist_hours × machinist_hourly_rate
+- Labor = labor_hours × labor_hourly_rate + operator_hours × operator_hourly_rate
 - Equipment = machinery_hours × machinery_hourly_rate
 ```
 

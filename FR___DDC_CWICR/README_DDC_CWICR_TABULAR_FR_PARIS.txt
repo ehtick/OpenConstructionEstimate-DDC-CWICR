@@ -27,7 +27,7 @@ La base de données DDC CWICR (Construction Work Items, Components & Resources) 
 SOURCES DES DONNÉES
 ------------------------------------------------------------------------------
 
-DDC CWICR est construit sur les normes officielles des coûts de construction des pays eurasiatiques qui sont accessibles au public. La base de données a été développée en étroite collaboration avec des estimateurs et des spécialistes de la construction de différents pays, ce qui nous a permis de prendre en compte les aspects pratiques du travail avec les données. Les données ont été systématisées en une structure unifiée, harmonisées méthodologiquement et présentées en 9 versions linguistiques et 9 versions de prix régionales pour une utilisation internationale.
+DDC CWICR est construit sur les normes officielles des coûts de construction des pays eurasiatiques qui sont accessibles au public. La base de données a été développée en étroite collaboration avec des estimateurs et des spécialistes de la construction de différents pays, ce qui nous a permis de prendre en compte les aspects pratiques du travail avec les données. Les données ont été systématisées en une structure unifiée, harmonisées méthodologiquement et présentées en 11 versions linguistiques et 11 versions de prix régionales pour une utilisation internationale.
 
 
 DÉVELOPPEMENT HISTORIQUE
@@ -74,11 +74,11 @@ Ressources
 
 Main-d'œuvre
   11 colonnes
-  count_workers/engineers/machinists, labor_hours par catégorie, cost_of_working_hours
+  count_workers/engineers/operators, labor_hours par catégorie, cost_of_working_hours
 
 Machines & Équipements
   12 colonnes
-  machine_class, personnel_machinist_grade, electricity_consumption_kwh, electricity_cost
+  machine_class, personnel_operator_grade, electricity_consumption_kwh, electricity_cost
 
 Variantes de prix
   16 colonnes
@@ -168,7 +168,7 @@ Basé sur DDC CWICR, vous pouvez construire des pipelines et des workflows autom
 VERSIONS LINGUISTIQUES
 ------------------------------------------------------------------------------
 
-La documentation est disponible en 9 langues :
+La documentation est disponible en 11 langues :
 
 * Arabe / العربية (Dubaï) - Moyen-Orient
 * Chinois / 中文 (Shanghai) - Asie de l'Est

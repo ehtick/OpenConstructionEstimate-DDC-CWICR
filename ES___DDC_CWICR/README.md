@@ -22,7 +22,7 @@ La base de datos DDC CWICR (Construction Work Items, Components & Resources) es 
 
 ## Fuentes de datos
 
-DDC CWICR se basa en estándares oficiales de costos de construcción de países euroasiáticos que están disponibles públicamente. La base de datos fue desarrollada en estrecha colaboración con estimadores y especialistas en construcción de diferentes países, lo que nos permitió tener en cuenta los aspectos prácticos del trabajo con datos. Los datos se han sistematizado en una estructura unificada, armonizados metodológicamente y presentados en 9 versiones de idioma y 9 versiones de precios regionales para uso internacional.
+DDC CWICR se basa en estándares oficiales de costos de construcción de países euroasiáticos que están disponibles públicamente. La base de datos fue desarrollada en estrecha colaboración con estimadores y especialistas en construcción de diferentes países, lo que nos permitió tener en cuenta los aspectos prácticos del trabajo con datos. Los datos se han sistematizado en una estructura unificada, armonizados metodológicamente y presentados en 11 versiones de idioma y 11 versiones de precios regionales para uso internacional.
 
 ## Desarrollo histórico
 
@@ -65,12 +65,12 @@ resource_code, resource_name, resource_unit, resource_quantity, resource_price_p
 ### Mano de obra
 *11 columnas*
 
-count_workers/engineers/machinists, labor_hours por categoría, cost_of_working_hours
+count_workers/engineers/operators, labor_hours por categoría, cost_of_working_hours
 
 ### Maquinaria y equipos
 *12 columnas*
 
-machine_class, personnel_machinist_grade, electricity_consumption_kwh, electricity_cost
+machine_class, personnel_operator_grade, electricity_consumption_kwh, electricity_cost
 
 ### Variantes de precio
 *16 columnas*
@@ -140,7 +140,7 @@ Basándose en DDC CWICR, puede construir pipelines y flujos de trabajo automatiz
 
 ## Versiones de idiomas
 
-La documentación está disponible en 9 idiomas:
+La documentación está disponible en 11 idiomas:
 
 - **Árabe / العربية** (Dubái) — Medio Oriente
 - **Chino / 中文** (Shanghái) — Asia Oriental

@@ -22,7 +22,7 @@ Die DDC CWICR-Datenbank (Construction Work Items, Components & Resources) ist ei
 
 ## Datenquellen
 
-DDC CWICR basiert auf offiziellen Baukostenstandards aus eurasischen Ländern, die öffentlich zugänglich sind. Die Datenbank wurde in enger Zusammenarbeit mit Kalkulatoren und Bauspezialisten aus verschiedenen Ländern entwickelt, was es ermöglichte, praktische Aspekte der Datenarbeit zu berücksichtigen. Die Daten wurden in eine einheitliche Struktur systematisiert, methodisch harmonisiert und in 9 Sprachversionen sowie 9 regionalen Preisversionen für den internationalen Einsatz bereitgestellt.
+DDC CWICR basiert auf offiziellen Baukostenstandards aus eurasischen Ländern, die öffentlich zugänglich sind. Die Datenbank wurde in enger Zusammenarbeit mit Kalkulatoren und Bauspezialisten aus verschiedenen Ländern entwickelt, was es ermöglichte, praktische Aspekte der Datenarbeit zu berücksichtigen. Die Daten wurden in eine einheitliche Struktur systematisiert, methodisch harmonisiert und in 11 Sprachversionen sowie 11 regionalen Preisversionen für den internationalen Einsatz bereitgestellt.
 
 ## Historische Entwicklung
 
@@ -65,12 +65,12 @@ resource_code, resource_name, resource_unit, resource_quantity, resource_price_p
 ### Arbeit
 *11 Spalten*
 
-count_workers/engineers/machinists, labor_hours nach Kategorie, cost_of_working_hours
+count_workers/engineers/operators, labor_hours nach Kategorie, cost_of_working_hours
 
 ### Maschinen & Geräte
 *12 Spalten*
 
-machine_class, personnel_machinist_grade, electricity_consumption_kwh, electricity_cost
+machine_class, personnel_operator_grade, electricity_consumption_kwh, electricity_cost
 
 ### Preisvarianten
 *16 Spalten*
@@ -140,7 +140,7 @@ Basierend auf DDC CWICR können Sie automatisierte Pipelines und Workflows für 
 
 ## Sprachversionen
 
-Die Dokumentation ist in 9 Sprachen verfügbar:
+Die Dokumentation ist in 11 Sprachen verfügbar:
 
 - **Arabisch / العربية** (Dubai) — Naher Osten
 - **Chinesisch / 中文** (Shanghai) — Ostasien

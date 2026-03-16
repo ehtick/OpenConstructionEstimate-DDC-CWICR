@@ -1,6 +1,6 @@
 # DDC CWICR - AI Assistant Instructions
 
-> **DDC CWICR** (Construction Work Items, Components & Resources) is an open-source multilingual construction cost database with 55,719 work items and 27,672 resources across 9 languages, powered by pre-computed OpenAI embeddings for semantic search.
+> **DDC CWICR** (Construction Work Items, Components & Resources) is an open-source multilingual construction cost database with 55,719 work items and 27,672 resources across 11 languages, powered by pre-computed OpenAI embeddings for semantic search.
 
 ## Quick Start
 
@@ -34,7 +34,7 @@ results = client.search(
 |--------|-------|
 | Work Items | 55,719 |
 | Resources | 27,672 |
-| Languages | 9 |
+| Languages | 11 |
 | Data Fields | 85 |
 | Embedding Dimensions | 3,072 (OpenAI text-embedding-3-large) |
 
@@ -60,6 +60,8 @@ results = client.search(
 | `HI` | Hindi | Mumbai | INR | `ddc_cwicr_hi` |
 | `PT` | Portuguese | São Paulo | BRL | `ddc_cwicr_pt` |
 | `RU` | Russian | St. Petersburg | RUB | `ddc_cwicr_ru` |
+| `US` | English | USA | USD | `ddc_cwicr_us` |
+| `UK` | English | UK | GBP | `ddc_cwicr_uk` |
 
 ## Core Methodology
 

@@ -22,8 +22,8 @@
 <div align="center">
   <img src="https://img.shields.io/badge/بنود_العمل-55,719-2563eb?style=for-the-badge" alt="بنود العمل">
   <img src="https://img.shields.io/badge/الموارد-27,672-059669?style=for-the-badge" alt="الموارد">
-  <img src="https://img.shields.io/badge/اللغات-9-d97706?style=for-the-badge" alt="اللغات">
-  <img src="https://img.shields.io/badge/الدول-10+-dc2626?style=for-the-badge" alt="الدول">
+  <img src="https://img.shields.io/badge/اللغات-11-d97706?style=for-the-badge" alt="اللغات">
+  <img src="https://img.shields.io/badge/الدول-12+-dc2626?style=for-the-badge" alt="الدول">
 </div>
 
 <div align="center">
@@ -155,7 +155,7 @@
 ### 🔍 قاعدة البيانات المتجهة
 - [قاعدة البيانات المتجهة](#قاعدة-البيانات-المتجهة) — البحث الدلالي مع Qdrant
 - [الإصدارات](#الإصدارات) — تحميل اللقطات
-- [المجموعات](#المجموعات) — 9 مجموعات لغوية
+- [المجموعات](#المجموعات) — 11 مجموعة لغوية
 - [نشر Docker](#نشر-docker) — إعداد مستضاف ذاتياً
 
 ### 🌐 API
@@ -192,7 +192,7 @@ DDC CWICR ليست مجرد قاعدة بيانات — إنها **وقود جا
 |--------|---------|
 | **تضمينات محسوبة مسبقاً** | لا حاجة لتوليد المتجهات — البحث الدلالي يعمل فوراً |
 | **مخطط منظم من 85 حقلاً** | الذكاء الاصطناعي يمكنه التفكير في علاقات البيانات وتقديم إجابات دقيقة |
-| **9 لغات مضمنة** | بناء تطبيقات متعددة اللغات بدون عبء الترجمة |
+| **11 لغة مضمنة** | بناء تطبيقات متعددة اللغات بدون عبء الترجمة |
 | **55,000+ بند عمل** | تغطية شاملة لأي مهمة تقدير بناء |
 | **منهجية قائمة على الموارد** | بيانات شفافة يمكن للذكاء الاصطناعي شرحها وتفصيلها |
 
@@ -463,7 +463,7 @@ for item in results:
 | **معايرة الأسعار** | مقارنة التكاليف عبر المناطق واللغات |
 | **تخطيط الموارد** | حساب ساعات العمل والمواد واحتياجات المعدات |
 | **تحليل الاستثمار** | تدقيق تكاليف عميق مع شفافية كاملة للموارد |
-| **دعم متعدد اللغات** | خدمة المستخدمين بـ 9 لغات مع تسعير محلي |
+| **دعم متعدد اللغات** | خدمة المستخدمين بـ 11 لغة مع تسعير محلي |
 | **تكامل BIM** | الاتصال بـ Revit/IFC للتقدير الآلي 4D/5D |
 | **تدريب نماذج الذكاء الاصطناعي** | استخدام بيانات منظمة لضبط ذكاء البناء |
 
@@ -521,9 +521,9 @@ for item in results:
 
 **الموارد** - `resource_code`، `resource_name`، `resource_unit`، `resource_quantity`، `parameter_resource_quantity`، `resource_price_per_unit_eur_current`، `resource_cost_eur`
 
-**العمالة** - `count_workers_per_unit`، `count_engineers_per_unit`، `count_machinists_per_unit`، `count_total_people_per_unit`، `labor_hours_construction_workers`، `labor_hours_machinists`، `labor_hours_engineers`، `total_labor_hours_workers_machinists`، `total_labor_hours_all_personnel`، `cost_of_working_hours`، `count_people_per_day`
+**العمالة** - `count_workers_per_unit`، `count_engineers_per_unit`، `count_operators_per_unit`، `count_total_people_per_unit`، `labor_hours_construction_workers`، `labor_hours_operators`، `labor_hours_engineers`، `total_labor_hours_workers_operators`، `total_labor_hours_all_personnel`، `cost_of_working_hours`، `count_people_per_day`
 
-**الآلات** - `machine_class2_name`، `machine_class3_name`، `personnel_machinist_code`، `personnel_machinist_grade`، `price_machinist_wages`، `price_relocation_included`، `price_cost_without_wages`، `electricity_consumption_kwh_per_machine_hour`، `electricity_cost_per_unit`، `electricity_cost_total_sum`، `cost_machinist_sum`، `total_value_machinery_equipment`
+**الآلات** - `machine_class2_name`، `machine_class3_name`، `personnel_operator_code`، `personnel_operator_grade`، `price_operator_wages`، `price_relocation_included`، `price_cost_without_wages`، `electricity_consumption_kwh_per_machine_hour`، `electricity_cost_per_unit`، `electricity_cost_total_sum`، `cost_operator_sum`، `total_value_machinery_equipment`
 
 **متغيرات السعر** - `price_code_prefix`، `price_abstract_resource_common_start`، `price_abstract_resource_variable_parts`، `price_abstract_resource_position_count`، `price_abstract_resource_est_price_min`، `price_abstract_resource_est_price_max`، `price_abstract_resource_est_price_mean`، `price_abstract_resource_est_price_median`، `price_abstract_resource_unit`، `abstract_resource_tech_group`
 
@@ -645,7 +645,7 @@ for item in results:
 | 💬 إدخال بلغة طبيعية | يقبل أي صيغة نص — قوائم، جمل، أوصاف منظمة |
 | 🤖 دعم LLM متعدد | يعمل مع OpenAI، Claude، أو Gemini (قابل للتبديل) |
 | 🔍 بحث دلالي | يجد أفضل المطابقات حتى مع صياغة مختلفة |
-| 🌍 9 لغات | DE، EN، RU، ES، FR، PT، ZH، AR، HI |
+| 🌍 11 لغة | DE، EN، RU، ES، FR، PT، ZH، AR، HI، US، UK |
 | 📊 تصدير متعدد | تقرير HTML، جدول بيانات Excel، مستند PDF |
 | ✏️ تحرير تفاعلي | عدل الكميات قبل الحساب النهائي |
 
@@ -763,7 +763,7 @@ for item in results:
 | 🔍 إعادة ترتيب AI | يحسن دقة المطابقة |
 | ✏️ تحرير كامل | إضافة، حذف، تعديل بنود العمل |
 | 📊 تصدير متعدد الصيغ | HTML، Excel، PDF |
-| 🌍 9 لغات | توطين كامل |
+| 🌍 11 لغة | توطين كامل |
 
 **بيانات الاعتماد المطلوبة:**
 - رمز روبوت Telegram
@@ -927,6 +927,8 @@ environment:
 | `PT` | البرتغالية | ساو باولو | BRL | `ddc_cwicr_pt` |
 | `RU` | الروسية | سانت بطرسبرغ | RUB | `ddc_cwicr_ru` |
 | `ZH` | الصينية | شنغهاي | CNY | `ddc_cwicr_zh` |
+| `US` | الإنجليزية | USA | USD | `ddc_cwicr_us` |
+| `UK` | الإنجليزية | UK | GBP | `ddc_cwicr_uk` |
 
 ---
 
@@ -1049,7 +1051,7 @@ project_YYYY-MM-DD.xls    ← جدول بيانات متوافق مع Excel
 
 ### المجموعات
 
-🇸🇦 `ddc_cwicr_ar` (العربية) · 🇨🇳 `ddc_cwicr_zh` (الصينية) · 🇩🇪 `ddc_cwicr_de` (الألمانية) · 🇬🇧 `ddc_cwicr_en` (الإنجليزية) · 🇪🇸 `ddc_cwicr_es` (الإسبانية) · 🇫🇷 `ddc_cwicr_fr` (الفرنسية) · 🇮🇳 `ddc_cwicr_hi` (الهندية) · 🇧🇷 `ddc_cwicr_pt` (البرتغالية) · 🇷🇺 `ddc_cwicr_ru` (الروسية)
+🇸🇦 `ddc_cwicr_ar` (العربية) · 🇨🇳 `ddc_cwicr_zh` (الصينية) · 🇩🇪 `ddc_cwicr_de` (الألمانية) · 🇬🇧 `ddc_cwicr_en` (الإنجليزية) · 🇪🇸 `ddc_cwicr_es` (الإسبانية) · 🇫🇷 `ddc_cwicr_fr` (الفرنسية) · 🇮🇳 `ddc_cwicr_hi` (الهندية) · 🇧🇷 `ddc_cwicr_pt` (البرتغالية) · 🇷🇺 `ddc_cwicr_ru` (الروسية) · 🇺🇸 `ddc_cwicr_us` (USA) · 🇬🇧 `ddc_cwicr_uk` (UK)
 
 كل مجموعة تحتوي **55,719 متجه** مع بيانات وصفية كاملة.
 
@@ -1111,7 +1113,7 @@ curl -X POST "http://localhost:6333/collections/ddc_cwicr_ar/snapshots/upload" \
 
 <div dir="rtl">
 
-واجهة REST API مجانية للبحث عن بنود أعمال البناء مع تفصيل كامل للتكاليف والعمالة والمواد والمعدات. **55,719 بند** بـ **9 لغات** مع **84 حقلاً** لكل بند.
+واجهة REST API مجانية للبحث عن بنود أعمال البناء مع تفصيل كامل للتكاليف والعمالة والمواد والمعدات. **55,719 بند** بـ **11 لغة** مع **84 حقلاً** لكل بند.
 
 **عنوان URL الأساسي:** `https://buildcalculator.io/api/v1`
 
@@ -1330,7 +1332,7 @@ DDC CWICR مشروع مجاني ومفتوح المصدر مكرس لجعل صن
 - **55,719 بند عمل** — عمليات بناء مفصلة مع تفصيل كامل للتكاليف
 - **27,672 مورد** — مواد وعمالة ومعدات مع تسعير إقليمي
 - **85 حقل بيانات** — مخطط منظم لحسابات دقيقة
-- **9 لغات** — مع تسعير خاص بالمنطقة (EUR، USD، CAD، RUB، CNY، إلخ)
+- **11 لغة** — مع تسعير خاص بالمنطقة (EUR، USD، CAD، RUB، CNY، إلخ)
 - **تضمينات محسوبة مسبقاً** — متجهات OpenAI بـ 3072 بُعد للبحث الدلالي
 
 ### منهجية قائمة على الموارد

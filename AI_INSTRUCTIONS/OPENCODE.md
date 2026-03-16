@@ -7,7 +7,7 @@
 Open-source construction cost database:
 - **55,719 work items** with detailed cost breakdowns
 - **27,672 resources** (materials, labor, equipment)
-- **9 languages** with regional pricing
+- **11 languages** with regional pricing
 - **Pre-computed embeddings** for semantic search
 - **Qdrant ready** vector database snapshots
 
@@ -58,6 +58,8 @@ print(results[['rate_code', 'rate_original_name', 'total_cost_per_position']])
 | AR | Arabic | `ddc_cwicr_ar` |
 | PT | Portuguese | `ddc_cwicr_pt` |
 | HI | Hindi | `ddc_cwicr_hi` |
+| US | English (USA) | `ddc_cwicr_us` |
+| UK | English (UK) | `ddc_cwicr_uk` |
 
 ## Semantic Search
 
