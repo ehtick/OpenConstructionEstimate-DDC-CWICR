@@ -932,11 +932,13 @@ project_YYYY-MM-DD.xls    ← Excel таблица
 | 🇨🇳 Китайский | Шанхай | `ZH___DDC_CWICR/ZH_SHANGHAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇩🇪 Немецкий | Берлин | `DE___DDC_CWICR/DE_BERLIN_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇬🇧 Английский | Торонто | `EN___DDC_CWICR/EN_TORONTO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
-| 🇪🇸 Испанский | Барселона | `ES___DDC_CWICR/ES_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇪🇸 Испанский | Барселона | `ES___DDC_CWICR/SP_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇫🇷 Французский | Париж | `FR___DDC_CWICR/FR_PARIS_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇮🇳 Хинди | Мумбаи | `HI___DDC_CWICR/HI_MUMBAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇧🇷 Португальский | Сан-Паулу | `PT___DDC_CWICR/PT_SAOPAULO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
-| 🇷🇺 Русский | Санкт-Петербург | `RU___DDC_CWICR/RU_SPB_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇷🇺 Русский | Санкт-Петербург | `RU___DDC_CWICR/RU_STPETERSBURG_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇬🇧 Английский (UK) | Великобритания (GBP) | `UK___DDC_CWICR/UK_GBP_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇺🇸 Английский (US) | США (USD) | `US___DDC_CWICR/USA_USD_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 
 ### Коллекции
 
@@ -962,7 +964,7 @@ docker-compose up -d
 
 curl -X POST "http://localhost:6333/collections/ddc_ru_stpetersburg/snapshots/upload" \
   -H "Content-Type: multipart/form-data" \
-  -F "snapshot=@RU___DDC_CWICR/RU_SPB_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot"
+  -F "snapshot=@RU___DDC_CWICR/RU_STPETERSBURG_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot"
 ```
 
 ---

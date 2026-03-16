@@ -1215,7 +1215,7 @@ El workflow selecciona automáticamente la colección correcta basada en `langua
 {LANG}_{CIUDAD}_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR
 ```
 
-Ejemplo: `ES_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR`
+Ejemplo: `SP_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR`
 
 ---
 
@@ -1253,11 +1253,13 @@ Los snapshots se encuentran ahora directamente en las carpetas de idioma corresp
 | 🇨🇳 Chino       | Shanghai       | `ZH___DDC_CWICR/ZH_SHANGHAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇩🇪 Alemán      | Berlín         | `DE___DDC_CWICR/DE_BERLIN_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`   |
 | 🇬🇧 Inglés      | Toronto        | `EN___DDC_CWICR/EN_TORONTO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`  |
-| 🇪🇸 Español     | Barcelona      | `ES___DDC_CWICR/ES_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`|
+| 🇪🇸 Español     | Barcelona      | `ES___DDC_CWICR/SP_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`|
 | 🇫🇷 Francés     | París          | `FR___DDC_CWICR/FR_PARIS_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`    |
 | 🇮🇳 Hindi       | Mumbai         | `HI___DDC_CWICR/HI_MUMBAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`   |
 | 🇧🇷 Portugués   | São Paulo      | `PT___DDC_CWICR/PT_SAOPAULO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇷🇺 Ruso        | San Petersburgo| `RU___DDC_CWICR/RU_STPETERSBURG_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇬🇧 UK          | GBP            | `UK___DDC_CWICR/UK_GBP_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`      |
+| 🇺🇸 USA         | USD            | `US___DDC_CWICR/USA_USD_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`     |
 
 ### Colecciones
 
@@ -1294,7 +1296,7 @@ docker-compose up -d
 # Importar snapshot
 curl -X POST "http://localhost:6333/collections/ddc_sp_barcelona/snapshots/upload" \
   -H "Content-Type: multipart/form-data" \
-  -F "snapshot=@ES___DDC_CWICR/ES_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot"
+  -F "snapshot=@ES___DDC_CWICR/SP_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot"
 
 # Dashboard: http://localhost:6333/dashboard
 ```

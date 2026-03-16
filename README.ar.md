@@ -1039,11 +1039,13 @@ project_YYYY-MM-DD.xls    ← جدول بيانات متوافق مع Excel
 | 🇨🇳 الصينية | شنغهاي | `ZH___DDC_CWICR/ZH_SHANGHAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇩🇪 الألمانية | برلين | `DE___DDC_CWICR/DE_BERLIN_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇬🇧 الإنجليزية | تورونتو | `EN___DDC_CWICR/EN_TORONTO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
-| 🇪🇸 الإسبانية | برشلونة | `ES___DDC_CWICR/ES_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇪🇸 الإسبانية | برشلونة | `ES___DDC_CWICR/SP_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇫🇷 الفرنسية | باريس | `FR___DDC_CWICR/FR_PARIS_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇮🇳 الهندية | مومباي | `HI___DDC_CWICR/HI_MUMBAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 | 🇧🇷 البرتغالية | ساو باولو | `PT___DDC_CWICR/PT_SAOPAULO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
-| 🇷🇺 الروسية | سانت بطرسبرغ | `RU___DDC_CWICR/RU_SPB_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇷🇺 الروسية | سانت بطرسبرغ | `RU___DDC_CWICR/RU_STPETERSBURG_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇬🇧 الإنجليزية (UK) | المملكة المتحدة (GBP) | `UK___DDC_CWICR/UK_GBP_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
+| 🇺🇸 الإنجليزية (US) | الولايات المتحدة (USD) | `US___DDC_CWICR/USA_USD_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
 
 ### المجموعات
 

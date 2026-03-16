@@ -1235,11 +1235,13 @@ Os snapshots estão nas pastas de idioma correspondentes deste repositório (arm
 | 🇨🇳 Chinês      | Xangai         | `ZH___DDC_CWICR/ZH_SHANGHAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`|
 | 🇩🇪 Alemão      | Berlim         | `DE___DDC_CWICR/DE_BERLIN_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`  |
 | 🇬🇧 Inglês      | Toronto        | `EN___DDC_CWICR/EN_TORONTO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot` |
-| 🇪🇸 Espanhol    | Barcelona      | `ES___DDC_CWICR/ES_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`|
+| 🇪🇸 Espanhol    | Barcelona      | `ES___DDC_CWICR/SP_BARCELONA_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`|
 | 🇫🇷 Francês     | Paris          | `FR___DDC_CWICR/FR_PARIS_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`   |
 | 🇮🇳 Hindi       | Mumbai         | `HI___DDC_CWICR/HI_MUMBAI_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`  |
 | 🇧🇷 Português   | São Paulo      | `PT___DDC_CWICR/PT_SAOPAULO_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`|
-| 🇷🇺 Russo       | São Petersburgo| `RU___DDC_CWICR/RU_SPB_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`     |
+| 🇷🇺 Russo       | São Petersburgo| `RU___DDC_CWICR/RU_STPETERSBURG_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`     |
+| 🇬🇧 Inglês (UK) | Reino Unido (GBP)| `UK___DDC_CWICR/UK_GBP_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`     |
+| 🇺🇸 Inglês (US) | Estados Unidos (USD)| `US___DDC_CWICR/USA_USD_workitems_costs_resources_EMBEDDINGS_3072_DDC_CWICR.snapshot`    |
 
 ### Coleções
 
