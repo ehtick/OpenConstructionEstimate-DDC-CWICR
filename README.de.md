@@ -168,7 +168,7 @@
 - [Ressourcen & Community](#ressourcen--community) — Links & Kanäle
 - [Beratung & Schulung](#beratung--schulung) — Professionelle Dienstleistungen
 - [Mitwirken](#mitwirken) — Workflows einreichen
-- [Lizenz](#lizenz) — CC BY 4.0 & MIT
+- [Lizenz](#lizenz) — CC BY 4.0
 - [Projekt unterstützen](#projekt-unterstützen) — Sponsern & Spenden
 - [🤖 AI Instructions](#ai-instructions) — Dokumentation für KI-Assistenten
 
@@ -1577,11 +1577,47 @@ KI-Assistenten können Ihnen helfen:
 
 ---
 
-## Lizenz
+## Lizenz — CC BY 4.0
 
-**Datenbank** (DDC CWICR) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Frei nutzbar, teilbar und anpassbar für kommerzielle Zwecke. Namensnennung: "DDC CWICR von DataDrivenConstruction"
+Das gesamte Repository ist lizenziert unter [**Creative Commons Attribution 4.0 International (CC BY 4.0)**](https://creativecommons.org/licenses/by/4.0/).
 
-**Code** (Workflows, Skripte) - [MIT](https://opensource.org/licenses/MIT). Frei nutzbar, modifizierbar und verteilbar ohne Einschränkungen.
+### Was Sie tun DÜRFEN
+
+| | |
+|---|---|
+| **Kommerzielle Nutzung** | Erstellen Sie Produkte, SaaS, Apps, APIs — kostenlos, ohne Genehmigung |
+| **Kopieren und Verteilen** | Teilen Sie die Daten in jedem Format |
+| **Ändern und Anpassen** | Transformieren, ergänzen, abgeleitete Werke erstellen |
+| **Für AI/ML verwenden** | Modelltraining, RAG-Pipelines, Embeddings |
+| **Für Forschung verwenden** | Wissenschaftliche Arbeiten, Berichte, Analysen |
+
+### Was Sie tun MÜSSEN
+
+| | |
+|---|---|
+| **Namensnennung angeben** | Sie **müssen** die Quelle bei jeder Nutzung angeben — siehe Beispiele unten |
+| **Änderungen angeben** | Wenn Sie die Daten geändert haben, **müssen** Sie angeben, was geändert wurde |
+| **Lizenz beibehalten** | Fügen Sie einen Link zu CC BY 4.0 bei der Weitergabe bei |
+
+### Namensnennung — Pflichtformat
+
+Jedes Projekt, Produkt, jede Veröffentlichung oder Anwendung, die DDC CWICR-Daten verwendet, **muss** enthalten:
+
+```
+DDC CWICR by Artem Boiko / DataDrivenConstruction
+https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR
+Licensed under CC BY 4.0
+```
+
+**Beispiele für die Namensnennung:**
+
+| Wo | Wie |
+|-----|-----|
+| **README / Dokumentation** | `Datenquelle: DDC CWICR by Artem Boiko / DataDrivenConstruction (CC BY 4.0)` |
+| **Web-App (Footer oder "Über")** | `Baukostendaten © Artem Boiko / DataDrivenConstruction — CC BY 4.0` |
+| **Wissenschaftliche Arbeit** | `Boiko, A. (2025). DDC CWICR — Construction Work Items, Costs & Resources. DataDrivenConstruction.` |
+| **Mobile / Desktop-App** | "Über"-Bildschirm: `Daten: DDC CWICR by DataDrivenConstruction (CC BY 4.0)` |
+| **API / SaaS** | API-Dokumentation: `Bereitgestellt von DDC CWICR (CC BY 4.0) — datadrivenconstruction.io` |
 
 ## Projekt unterstützen
 

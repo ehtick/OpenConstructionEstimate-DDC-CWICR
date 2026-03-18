@@ -168,7 +168,7 @@
 - [リソース＆コミュニティ](#リソース--コミュニティ) — リンク＆チャンネル
 - [コンサルティング＆トレーニング](#コンサルティング--トレーニング) — プロフェッショナルサービス
 - [コントリビューション](#コントリビューション) — ワークフローを提出
-- [ライセンス](#ライセンス) — CC BY 4.0 & MIT
+- [ライセンス](#ライセンス) — CC BY 4.0
 - [プロジェクトを支援する](#プロジェクトを支援する) — スポンサー＆寄付
 
 
@@ -1559,11 +1559,47 @@ AIアシスタントは以下をサポートします：
 
 ---
 
-## ライセンス
+## ライセンス — CC BY 4.0
 
-**データベース** (DDC CWICR) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。商用目的で自由に使用、共有、改変可能。帰属表示: "DDC CWICR by DataDrivenConstruction"
+リポジトリ全体は [**Creative Commons Attribution 4.0 International (CC BY 4.0)**](https://creativecommons.org/licenses/by/4.0/) の下でライセンスされています。
 
-**コード** (ワークフロー、スクリプト) - [MIT](https://opensource.org/licenses/MIT)。制限なく自由に使用、変更、配布可能。
+### できること
+
+| | |
+|---|---|
+| **商用利用** | 製品、SaaS、アプリ、APIを作成 — 無料、許可不要 |
+| **コピーと配布** | 任意の形式でデータを共有 |
+| **変更と適応** | 変換、追加、派生作品の作成 |
+| **AI/MLでの利用** | モデルトレーニング、RAGパイプライン、エンベディング |
+| **研究での利用** | 学術論文、レポート、分析 |
+
+### 必須事項
+
+| | |
+|---|---|
+| **帰属表示** | 使用するたびにソースを**必ず**明記してください — 以下の例を参照 |
+| **変更の明記** | データを変更した場合、何を変更したかを**必ず**明記してください |
+| **ライセンスの保持** | 配布時にCC BY 4.0へのリンクを含めてください |
+
+### 帰属表示 — 必須フォーマット
+
+DDC CWICRデータを使用するすべてのプロジェクト、製品、出版物、またはアプリケーションは以下を**必ず**含める必要があります：
+
+```
+DDC CWICR by Artem Boiko / DataDrivenConstruction
+https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR
+Licensed under CC BY 4.0
+```
+
+**帰属表示の例：**
+
+| 場所 | 方法 |
+|-----|-----|
+| **README / ドキュメント** | `データソース: DDC CWICR by Artem Boiko / DataDrivenConstruction (CC BY 4.0)` |
+| **Webアプリ（フッターまたは「概要」）** | `建設コストデータ © Artem Boiko / DataDrivenConstruction — CC BY 4.0` |
+| **学術論文** | `Boiko, A. (2025). DDC CWICR — Construction Work Items, Costs & Resources. DataDrivenConstruction.` |
+| **モバイル / デスクトップアプリ** | 「概要」画面: `データ: DDC CWICR by DataDrivenConstruction (CC BY 4.0)` |
+| **API / SaaS** | APIドキュメント: `Powered by DDC CWICR (CC BY 4.0) — datadrivenconstruction.io` |
 
 ## プロジェクトを支援する
 

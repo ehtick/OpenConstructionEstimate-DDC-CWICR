@@ -171,7 +171,7 @@
 - [الموارد والمجتمع](#الموارد-والمجتمع) — الروابط والقنوات
 - [الاستشارات والتدريب](#الاستشارات-والتدريب) — الخدمات المهنية
 - [المساهمة](#المساهمة) — قدم سير عملك
-- [الترخيص](#الترخيص) — CC BY 4.0 و MIT
+- [الترخيص](#الترخيص) — CC BY 4.0
 - [دعم المشروع](#دعم-المشروع) — الرعاية والتبرع
 - [🤖 تعليمات الذكاء الاصطناعي](#تعليمات-الذكاء-الاصطناعي) — توثيق لمساعدي الذكاء الاصطناعي
 
@@ -1389,11 +1389,47 @@ DDC CWICR مشروع مجاني ومفتوح المصدر مكرس لجعل صن
 
 ---
 
-## الترخيص
+## الترخيص — CC BY 4.0
 
-**قاعدة البيانات** (DDC CWICR) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). مجانية للاستخدام والمشاركة والتكييف تجارياً. الإسناد: "DDC CWICR by DataDrivenConstruction"
+المستودع بالكامل مرخص بموجب [**Creative Commons Attribution 4.0 International (CC BY 4.0)**](https://creativecommons.org/licenses/by/4.0/).
 
-**الكود** (سير العمل، السكريبتات) - [MIT](https://opensource.org/licenses/MIT). مجاني للاستخدام والتعديل والتوزيع بدون قيود.
+### ما يُمكنك فعله
+
+| | |
+|---|---|
+| **الاستخدام التجاري** | أنشئ منتجات، SaaS، تطبيقات، API — مجاناً، بدون طلب إذن |
+| **النسخ والتوزيع** | شارك البيانات بأي صيغة |
+| **التعديل والتكييف** | حوّل، أضف، أنشئ أعمالاً مشتقة |
+| **استخدام AI/ML** | تدريب النماذج، خطوط RAG، التضمينات |
+| **الاستخدام البحثي** | الأوراق العلمية، التقارير، التحليلات |
+
+### ما يجب عليك فعله
+
+| | |
+|---|---|
+| **ذكر المصدر** | يجب عليك **إلزامياً** ذكر المصدر عند كل استخدام — انظر الأمثلة أدناه |
+| **ذكر التغييرات** | إذا عدّلت البيانات، يجب عليك **إلزامياً** ذكر ما تم تغييره |
+| **الحفاظ على الترخيص** | أدرج رابط CC BY 4.0 عند التوزيع |
+
+### ذكر المصدر — الصيغة الإلزامية
+
+كل مشروع أو منتج أو منشور أو تطبيق يستخدم بيانات DDC CWICR **يجب** أن يتضمن:
+
+```
+DDC CWICR by Artem Boiko / DataDrivenConstruction
+https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR
+Licensed under CC BY 4.0
+```
+
+**أمثلة على ذكر المصدر:**
+
+| أين | كيف |
+|-----|-----|
+| **README / التوثيق** | `Data source: DDC CWICR by Artem Boiko / DataDrivenConstruction (CC BY 4.0)` |
+| **تطبيق ويب (التذييل أو "حول")** | `Construction cost data © Artem Boiko / DataDrivenConstruction — CC BY 4.0` |
+| **ورقة علمية** | `Boiko, A. (2025). DDC CWICR — Construction Work Items, Costs & Resources. DataDrivenConstruction.` |
+| **تطبيق جوال / سطح مكتب** | شاشة "حول التطبيق": `Data: DDC CWICR by DataDrivenConstruction (CC BY 4.0)` |
+| **API / SaaS** | توثيق API: `Powered by DDC CWICR (CC BY 4.0) — datadrivenconstruction.io` |
 
 ## دعم المشروع
 

@@ -168,7 +168,7 @@
 - [资源与社区](#资源与社区) — 链接和频道
 - [咨询与培训](#咨询与培训) — 专业服务
 - [贡献](#贡献) — 提交您的工作流
-- [许可证](#许可证) — CC BY 4.0 和 MIT
+- [许可证](#许可证) — CC BY 4.0
 - [支持项目](#支持项目) — 赞助和捐赠
 
 
@@ -1559,11 +1559,47 @@ AI 助手可以帮助您：
 
 ---
 
-## 许可证
+## 许可证 — CC BY 4.0
 
-**数据库**（DDC CWICR）— [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。可免费用于商业用途、共享和改编。署名："DDC CWICR by DataDrivenConstruction"
+整个仓库基于 [**Creative Commons Attribution 4.0 International (CC BY 4.0)**](https://creativecommons.org/licenses/by/4.0/) 许可。
 
-**代码**（工作流、脚本）— [MIT](https://opensource.org/licenses/MIT)。可自由使用、修改和分发，无任何限制。
+### 您可以做什么
+
+| | |
+|---|---|
+| **商业使用** | 创建产品、SaaS、应用程序、API — 免费，无需请求许可 |
+| **复制和分发** | 以任何格式分享数据 |
+| **修改和改编** | 转换、补充、创建衍生作品 |
+| **用于 AI/ML** | 模型训练、RAG 管道、嵌入 |
+| **用于研究** | 学术论文、报告、分析 |
+
+### 您必须做什么
+
+| | |
+|---|---|
+| **标注来源** | 每次使用时您**必须**注明来源 — 参见下方示例 |
+| **标注更改** | 如果您修改了数据，您**必须**注明修改了什么 |
+| **保留许可证** | 分发时包含 CC BY 4.0 链接 |
+
+### 署名 — 必需格式
+
+每个使用 DDC CWICR 数据的项目、产品、出版物或应用程序**必须**包含：
+
+```
+DDC CWICR by Artem Boiko / DataDrivenConstruction
+https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR
+Licensed under CC BY 4.0
+```
+
+**署名示例：**
+
+| 位置 | 方式 |
+|-----|-----|
+| **README / 文档** | `数据来源：DDC CWICR by Artem Boiko / DataDrivenConstruction (CC BY 4.0)` |
+| **Web 应用（页脚或"关于"）** | `建筑成本数据 © Artem Boiko / DataDrivenConstruction — CC BY 4.0` |
+| **学术论文** | `Boiko, A. (2025). DDC CWICR — Construction Work Items, Costs & Resources. DataDrivenConstruction.` |
+| **移动端 / 桌面应用** | "关于"界面：`数据：DDC CWICR by DataDrivenConstruction (CC BY 4.0)` |
+| **API / SaaS** | API 文档：`由 DDC CWICR (CC BY 4.0) 提供 — datadrivenconstruction.io` |
 
 ## 支持项目
 

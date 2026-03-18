@@ -168,7 +168,7 @@
 - [Resources & Community](#resources--community) — Links & channels
 - [Consulting & Training](#consulting--training) — Professional services
 - [Contributing](#contributing) — Submit your workflows
-- [License](#license) — CC BY 4.0 & MIT
+- [License](#license--cc-by-40) — CC BY 4.0
 - [Support the Project](#support-the-project) — Sponsor & donate
 - [🤖 AI Instructions](#ai-instructions) — Documentation for AI assistants
 
@@ -1709,11 +1709,47 @@ AI assistants can help you:
 
 ---
 
-## License
+## License — CC BY 4.0
 
-**Database** (DDC CWICR) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Free to use, share, and adapt commercially. Attribution: "DDC CWICR by DataDrivenConstruction"
+This entire repository is licensed under [**Creative Commons Attribution 4.0 International (CC BY 4.0)**](https://creativecommons.org/licenses/by/4.0/).
 
-**Code** (workflows, scripts) - [MIT](https://opensource.org/licenses/MIT). Free to use, modify, and distribute without restrictions.
+### What you CAN do
+
+| | |
+|---|---|
+| ✅ **Use commercially** | Build products, SaaS, apps, APIs — no cost, no permission needed |
+| ✅ **Copy & redistribute** | Share the data in any medium or format |
+| ✅ **Modify & adapt** | Transform, remix, build upon for any purpose |
+| ✅ **Use for AI/ML training** | Train models, build RAG pipelines, create embeddings |
+| ✅ **Use in research** | Academic papers, reports, industry analysis |
+
+### What you MUST do
+
+| | |
+|---|---|
+| 📌 **Give attribution** | You **must** credit the source in every use — see examples below |
+| 📌 **Indicate changes** | If you modified the data, you **must** state what was changed |
+| 📌 **Keep the license** | Include a link to CC BY 4.0 when redistributing |
+
+### Attribution — Required Format
+
+Every project, product, publication, or application that uses DDC CWICR data **must** include:
+
+```
+DDC CWICR by Artem Boiko / DataDrivenConstruction
+https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR
+Licensed under CC BY 4.0
+```
+
+**Examples of how to attribute:**
+
+| Where | How |
+|-------|-----|
+| **README / documentation** | `Data source: DDC CWICR by Artem Boiko / DataDrivenConstruction (CC BY 4.0)` |
+| **Web app (footer or About)** | `Construction cost data © Artem Boiko / DataDrivenConstruction — CC BY 4.0` |
+| **Academic paper** | `Boiko, A. (2025). DDC CWICR — Construction Work Items, Costs & Resources. DataDrivenConstruction.` |
+| **Mobile / desktop app** | Credits or About screen: `Cost data: DDC CWICR by DataDrivenConstruction (CC BY 4.0)` |
+| **API / SaaS** | API docs or terms page: `Data provided by DDC CWICR (CC BY 4.0) — datadrivenconstruction.io` |
 
 ## Support the Project
 
