@@ -25,7 +25,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/License-CC_BY_4.0-green?style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/Version-v0.1.0-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v0.1.1-blue?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/Embeddings-OpenAI_3072d-412991?style=flat-square" alt="Embeddings">
   <img src="https://img.shields.io/badge/Vector_DB-Qdrant-dc382d?style=flat-square" alt="Qdrant">
   <img src="https://img.shields.io/badge/Automation-n8n-ea4b71?style=flat-square" alt="n8n">
@@ -120,8 +120,6 @@
 - [Perfect Fuel for AI](#-perfect-fuel-for-your-ai-products) — Why this database is ideal for AI
 - [Claude Code & Google Antigravity](#-claude-code--google-antigravity--ai-coding-assistants) — AI coding assistants
 - [n8n](#-n8n--visual-workflow-automation) — Workflow automation
-- [Dify](#-dify--build-llm-applications) — LLM app development
-- [Sim AI & Others](#-sim-ai--similar-platforms) — Compatible platforms
 - [Universal Use Cases](#-universal-use-cases) — What you can build
 
 ### 📊 Database & Data
@@ -162,6 +160,7 @@
 
 ### 🚀 Getting Started
 - [Quick Start - Python](#quick-start) — Tabular data & semantic search
+- [Developer Examples](#-developer-examples) — Python, JavaScript, Rust, R, Shell, n8n guides
 - [Integration Use Cases](#integration) — Entry to Advanced level
 
 ### 👥 Community
@@ -246,44 +245,13 @@ Export to **Excel, PDF, HTML, ERP systems, BIM platforms** — the structured 85
 
 ## 🎯 DDC Skills — 196 Ready-to-Use AI Automations
 
-> **New!** [DDC Skills for AI Agents in Construction](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — a complete automation toolkit for construction companies.
+**[DDC Skills for AI Agents in Construction](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)** — 196 automation skills with direct integration into this CWICR database. Clone, open with AI coding assistant, describe what you need.
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
     <img src="https://img.shields.io/badge/DDC_Skills-196_AI_Automations-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
   </a>
 </p>
-
-### How It Works
-
-```
-1. Clone the Skills repository
-2. Open with Claude Code, Cursor, or GitHub Copilot
-3. Describe what you want to automate — AI guides you step by step
-```
-
-### Time Savings
-
-| Process | Before | After | Reduction |
-|---------|--------|-------|-----------|
-| Rate lookups | 15 min | 10 sec | 99% |
-| Daily reports | Manual | Automated | 92% |
-| Cost estimates | Hours | Minutes | 87% |
-| Budget tracking | Spreadsheets | Real-time | 87% |
-
-### What's Included
-
-| Folder | Skills | Description |
-|--------|--------|-------------|
-| **DDC Toolkit** | 85 | Production tools including CWICR database integration |
-| **DDC Book** | 50 | Skills based on Data-Driven Construction methodology |
-| **DDC Insights** | 5 | n8n workflow templates |
-| **DDC Curated** | 5 | External integration skills |
-| **DDC Innovative** | 22 | Advanced AI/ML capabilities |
-
-The Skills repository provides **direct integration with this CWICR database** — semantic search, automated cost calculations, daily reports, defect detection, and more.
-
-**→ [Get Started with DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
 
 ---
 
@@ -340,82 +308,6 @@ Build powerful automation pipelines without coding. Connect DDC CWICR to 400+ ap
 4. Activate and test
 
 See [n8n Workflows](#n8n-workflows--detailed-description) section for detailed setup.
-
----
-
-### 🤖 Dify — Build LLM Applications
-
-Create custom AI applications with DDC CWICR as the knowledge base.
-
-**Setup:**
-1. Create new Dify application
-2. Add Knowledge Base → Upload Parquet/CSV files or connect to Qdrant
-3. Configure RAG pipeline with embeddings
-4. Build your chat interface or API
-
-**Application Ideas:**
-
-| App Type | Description |
-|----------|-------------|
-| **Construction Estimator Chatbot** | Conversational interface for cost queries |
-| **Work Item Search** | Natural language search across 55,000+ items |
-| **Cost Advisor** | AI that explains cost breakdowns and suggests optimizations |
-| **Multilingual Assistant** | Auto-detect language and respond in user's language |
-| **API Endpoint** | REST API for integration with other systems |
-
-**Example Dify Prompt Template:**
-```
-You are a construction cost estimation assistant with access to DDC CWICR database.
-
-Context: {{context}}
-
-User question: {{query}}
-
-Provide accurate cost information based on the database. Include:
-- Relevant work items with codes
-- Unit costs and quantities
-- Resource breakdown (labor, materials, equipment)
-- Total cost calculation
-```
-
----
-
-### 🔮 Sim AI & Similar Platforms
-
-DDC CWICR integrates with any AI platform that supports:
-- **Vector databases** (Qdrant, Pinecone, Weaviate, Milvus)
-- **Structured data** (CSV, Parquet, Excel)
-- **OpenAI embeddings** (text-embedding-3-large, 3072 dimensions)
-
-**Compatible Platforms:**
-- **Sim AI** — AI simulation and modeling
-- **LangChain / LlamaIndex** — LLM application frameworks
-- **Flowise** — Low-code LLM app builder
-- **Botpress** — Conversational AI platform
-- **Voiceflow** — Voice and chat design
-- **Stack AI** — No-code AI workflows
-- **Relevance AI** — AI workforce platform
-
-**Universal Integration Pattern:**
-
-```python
-# Works with any platform that supports Qdrant
-from qdrant_client import QdrantClient
-
-# Connect to DDC CWICR
-client = QdrantClient("your-qdrant-instance", port=6333)
-
-# Semantic search
-results = client.search(
-    collection_name="ddc_en_toronto",  # or ddc_de_berlin, ddc_ru_stpetersburg, ddc_zh_shanghai, etc.
-    query_vector=your_embedding,
-    limit=10
-)
-
-# Use results in your AI application
-for item in results:
-    print(f"{item.payload['rate_code']}: {item.payload['rate_original_name']}")
-```
 
 ---
 
@@ -851,17 +743,6 @@ Full-featured Telegram bot supporting all input types: text descriptions, constr
   <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/Universal%20Estimator%20Bot%20Text%20%20Photo%20PDF.jpg" width="100%"/>
   <br></br>
 </p>
-
-<h3 align="left">🤖 Try It Now — Live Demo Bots</h3>
-<p align="left"><i>Test the estimation workflows instantly in Telegram</i></p>
-<h3>📷 Universal Bot</h3>
-<p><b>@OpenConstructionEstimate_bot</b></p>
-<p>Full-featured bot for text, photos, and PDF</p>
-<a href="https://t.me/OpenConstructionEstimate_bot">
-<img src="https://img.shields.io/badge/Open_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Universal Bot"/>
-</a>
-<br><br>
-
 
 ```mermaid
 flowchart TB
@@ -1606,6 +1487,41 @@ results = client.search(
 )
 ```
 
+
+---
+
+## 💻 Developer Examples
+
+The [`examples/`](./examples/) directory contains **ready-to-run code** in multiple languages — from basic data loading to advanced RAG pipelines and cost estimation.
+
+### Three Ways to Start
+
+| Path | Setup | Time to First Result |
+|------|-------|---------------------|
+| **Zero setup** | `curl` or `fetch()` to REST API | 10 seconds |
+| **Local data** | `pip install pandas pyarrow` + Parquet file | 2 minutes |
+| **Full stack** | Docker + Qdrant + OpenAI API key | 5 minutes |
+
+### Available Examples
+
+| # | Example | Language | Level |
+|---|---------|----------|-------|
+| 01 | Load and explore data | Python, JS, Rust, R | Beginner |
+| 02 | Semantic search with Qdrant | Python, JS, Rust | Beginner |
+| 03 | Cost estimation from text | Python, JS | Intermediate |
+| 04 | Cost estimation from photos | Python | Intermediate |
+| 05 | BOQ generation & Excel export | Python, JS | Intermediate |
+| 06 | RAG pipeline (Claude + Qdrant) | Python | Advanced |
+| 07 | Multi-language cost comparison | Python | Intermediate |
+| 08 | Data analysis & visualization | Python, R | Intermediate |
+| 09 | Filtered & faceted search | Python | Intermediate |
+| 10 | Embedding generation pipeline | Python | Advanced |
+| — | n8n workflow guides | Markdown | All levels |
+| — | Shell setup & API examples | Bash/cURL | Beginner |
+
+Includes sample data (100-row Parquet extract), Docker Compose for Qdrant, and `.env` template.
+
+**→ [Browse all examples](./examples/)**
 
 ---
 

@@ -25,7 +25,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/许可证-CC_BY_4.0-green?style=flat-square" alt="许可证">
-  <img src="https://img.shields.io/badge/版本-v0.1.0-blue?style=flat-square" alt="版本">
+  <img src="https://img.shields.io/badge/版本-v0.1.1-blue?style=flat-square" alt="版本">
   <img src="https://img.shields.io/badge/嵌入向量-OpenAI_3072d-412991?style=flat-square" alt="嵌入向量">
   <img src="https://img.shields.io/badge/向量数据库-Qdrant-dc382d?style=flat-square" alt="Qdrant">
   <img src="https://img.shields.io/badge/自动化-n8n-ea4b71?style=flat-square" alt="n8n">
@@ -120,9 +120,8 @@
 - [AI 产品的完美燃料](#-您的-ai-产品的完美燃料) — 为什么这个数据库是 AI 的理想选择
 - [Claude Code 与 Google Antigravity](#-claude-code--google-antigravity--ai-编程助手) — AI 编程助手
 - [n8n](#-n8n--可视化工作流自动化) — 工作流自动化
-- [Dify](#-dify--构建-llm-应用) — LLM 应用开发
-- [Sim AI 及其他](#-sim-ai--类似平台) — 兼容平台
 - [通用场景](#-通用场景) — 您可以构建什么
+- [开发者示例](#-开发者示例) — 即用型代码
 
 ### 📊 数据库与数据
 - [关于](#关于) — 什么是 DDC CWICR
@@ -244,46 +243,15 @@ DDC CWICR 提供**完整、结构化的工作描述**，可在任何系统或格
 
 ---
 
-## 🎯 DDC Skills — 196 个即用型 AI 自动化
+## 🎯 DDC Skills
 
-> **新功能！** [建筑行业 AI 代理 DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — 建筑公司的完整自动化工具包。
+**[建筑业AI代理DDC技能](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)** — 196个自动化技能，直接集成到CWICR数据库。克隆，用AI编码助手打开，描述您的需求。
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
-    <img src="https://img.shields.io/badge/DDC_Skills-196_AI自动化-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_AI_Automations-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
   </a>
 </p>
-
-### 工作原理
-
-```
-1. 克隆 Skills 仓库
-2. 使用 Claude Code、Cursor 或 GitHub Copilot 打开
-3. 描述您想自动化的内容 — AI 将逐步引导您
-```
-
-### 时间节省
-
-| 流程 | 之前 | 之后 | 减少 |
-|------|------|------|------|
-| 价格查询 | 15分钟 | 10秒 | 99% |
-| 日报 | 手动 | 自动 | 92% |
-| 成本估算 | 数小时 | 数分钟 | 87% |
-| 预算跟踪 | 电子表格 | 实时 | 87% |
-
-### 包含内容
-
-| 文件夹 | Skills | 描述 |
-|--------|--------|------|
-| **DDC Toolkit** | 85 | 生产工具，包括 CWICR 数据库集成 |
-| **DDC Book** | 50 | 基于 Data-Driven Construction 方法论的技能 |
-| **DDC Insights** | 5 | n8n 工作流模板 |
-| **DDC Curated** | 5 | 外部集成技能 |
-| **DDC Innovative** | 22 | 高级 AI/ML 功能 |
-
-Skills 仓库提供**与此 CWICR 数据库的直接集成** — 语义搜索、自动成本计算、日报、缺陷检测等。
-
-**→ [开始使用 DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
 
 ---
 
@@ -340,82 +308,6 @@ claude
 4. 激活并测试
 
 详见 [n8n 工作流](#n8n-工作流--详细说明) 章节的详细设置。
-
----
-
-### 🤖 Dify — 构建 LLM 应用
-
-使用 DDC CWICR 作为知识库创建自定义 AI 应用。
-
-**设置：**
-1. 创建新的 Dify 应用
-2. 添加知识库 → 上传 Parquet/CSV 文件或连接到 Qdrant
-3. 使用嵌入向量配置 RAG 管道
-4. 构建您的聊天界面或 API
-
-**应用创意：**
-
-| 应用类型 | 描述 |
-|----------|-------------|
-| **建筑估算聊天机器人** | 成本查询的对话界面 |
-| **工作项目搜索** | 跨 55,000+ 项目的自然语言搜索 |
-| **成本顾问** | 解释成本分解并提供优化建议的 AI |
-| **多语言助手** | 自动检测语言并以用户语言回复 |
-| **API 端点** | 用于与其他系统集成的 REST API |
-
-**Dify 提示模板示例：**
-```
-您是一个建筑成本估算助手，可以访问 DDC CWICR 数据库。
-
-上下文：{{context}}
-
-用户问题：{{query}}
-
-根据数据库提供准确的成本信息。包括：
-- 带代码的相关工作项目
-- 单位成本和数量
-- 资源分解（人工、材料、设备）
-- 总成本计算
-```
-
----
-
-### 🔮 Sim AI 及类似平台
-
-DDC CWICR 可与任何支持以下功能的 AI 平台集成：
-- **向量数据库**（Qdrant、Pinecone、Weaviate、Milvus）
-- **结构化数据**（CSV、Parquet、Excel）
-- **OpenAI 嵌入向量**（text-embedding-3-large，3072 维度）
-
-**兼容平台：**
-- **Sim AI** — AI 模拟与建模
-- **LangChain / LlamaIndex** — LLM 应用框架
-- **Flowise** — 低代码 LLM 应用构建器
-- **Botpress** — 对话 AI 平台
-- **Voiceflow** — 语音和聊天设计
-- **Stack AI** — 无代码 AI 工作流
-- **Relevance AI** — AI 工作流平台
-
-**通用集成模式：**
-
-```python
-# 适用于任何支持 Qdrant 的平台
-from qdrant_client import QdrantClient
-
-# 连接到 DDC CWICR
-client = QdrantClient("your-qdrant-instance", port=6333)
-
-# 语义搜索
-results = client.search(
-    collection_name="ddc_zh_shanghai",  # 或 ddc_en_toronto, ddc_de_berlin, ddc_ru_stpetersburg 等
-    query_vector=your_embedding,
-    limit=10
-)
-
-# 在您的 AI 应用中使用结果
-for item in results:
-    print(f"{item.payload['rate_code']}: {item.payload['rate_original_name']}")
-```
 
 ---
 
@@ -848,17 +740,6 @@ flowchart TB
   <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/Universal%20Estimator%20Bot%20Text%20%20Photo%20PDF.jpg" width="100%"/>
   <br></br>
 </p>
-
-<h3 align="left">🤖 立即体验 — 在线演示机器人</h3>
-<p align="left"><i>在 Telegram 中即时测试估算工作流</i></p>
-<h3>📷 通用机器人</h3>
-<p><b>@OpenConstructionEstimate_bot</b></p>
-<p>支持文本、照片和 PDF 的全功能机器人</p>
-<a href="https://t.me/OpenConstructionEstimate_bot">
-<img src="https://img.shields.io/badge/打开机器人-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="通用机器人"/>
-</a>
-<br><br>
-
 
 ```mermaid
 flowchart TB
@@ -1474,6 +1355,27 @@ results = client.search(
 )
 ```
 
+
+---
+
+## 💻 开发者示例
+
+[`examples/`](./examples/) 目录包含多种语言的**即用型代码**。
+
+| # | Example | Language | Level |
+|---|---------|----------|-------|
+| 01 | Load and explore data | Python, JS, Rust, R | Beginner |
+| 02 | Semantic search with Qdrant | Python, JS, Rust | Beginner |
+| 03 | Cost estimation from text | Python, JS | Intermediate |
+| 04 | Cost estimation from photos | Python | Intermediate |
+| 05 | BOQ generation & Excel export | Python, JS | Intermediate |
+| 06 | RAG pipeline (Claude + Qdrant) | Python | Advanced |
+| 07 | Multi-language cost comparison | Python | Intermediate |
+| 08 | Data analysis & visualization | Python, R | Intermediate |
+| 09 | Filtered & faceted search | Python | Intermediate |
+| 10 | Embedding generation pipeline | Python | Advanced |
+
+**→ [浏览所有示例](./examples/)**
 
 ---
 

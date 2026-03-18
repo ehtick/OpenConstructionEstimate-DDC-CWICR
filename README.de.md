@@ -25,7 +25,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Lizenz-CC_BY_4.0-green?style=flat-square" alt="Lizenz">
-  <img src="https://img.shields.io/badge/Version-v0.1.0-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v0.1.1-blue?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/Embeddings-OpenAI_3072d-412991?style=flat-square" alt="Embeddings">
   <img src="https://img.shields.io/badge/Vektor_DB-Qdrant-dc382d?style=flat-square" alt="Qdrant">
   <img src="https://img.shields.io/badge/Automatisierung-n8n-ea4b71?style=flat-square" alt="n8n">
@@ -120,9 +120,8 @@
 - [Perfekter Treibstoff für KI](#-perfekter-treibstoff-für-ihre-ki-produkte) — Warum diese Datenbank ideal für KI ist
 - [Claude Code & Google Antigravity](#-claude-code--google-antigravity--ki-programmierassistenten) — KI-Programmierassistenten
 - [n8n](#-n8n--visuelle-workflow-automatisierung) — Workflow-Automatisierung
-- [Dify](#-dify--llm-anwendungen-erstellen) — LLM-App-Entwicklung
-- [Sim AI & Andere](#-sim-ai--ähnliche-plattformen) — Kompatible Plattformen
 - [Universelle Anwendungsfälle](#-universelle-anwendungsfälle) — Was Sie erstellen können
+- [Entwicklerbeispiele](#-entwicklerbeispiele) — Sofort ausführbarer Code
 
 ### 📊 Datenbank & Daten
 - [Überblick](#überblick) — Was ist DDC CWICR
@@ -244,46 +243,15 @@ Export nach **Excel, PDF, HTML, ERP-Systeme, BIM-Plattformen** — das strukturi
 
 ---
 
-## 🎯 DDC Skills — 196 Einsatzbereite KI-Automatisierungen
+## 🎯 DDC Skills
 
-> **Neu!** [DDC Skills für KI-Agenten im Bauwesen](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — ein komplettes Automatisierungs-Toolkit für Bauunternehmen.
+**[DDC Skills für KI-Agenten im Bauwesen](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)** — 196 Automatisierungsfähigkeiten mit direkter Integration in diese CWICR-Datenbank. Klonen, mit KI-Codierungsassistent öffnen, beschreiben was Sie brauchen.
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
-    <img src="https://img.shields.io/badge/DDC_Skills-196_KI_Automatisierungen-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_AI_Automations-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
   </a>
 </p>
-
-### So funktioniert es
-
-```
-1. Skills-Repository klonen
-2. Mit Claude Code, Cursor oder GitHub Copilot öffnen
-3. Beschreiben Sie, was Sie automatisieren möchten — KI führt Sie Schritt für Schritt
-```
-
-### Zeitersparnis
-
-| Prozess | Vorher | Nachher | Reduzierung |
-|---------|--------|---------|-------------|
-| Preisrecherche | 15 Min | 10 Sek | 99% |
-| Tagesberichte | Manuell | Automatisiert | 92% |
-| Kostenschätzungen | Stunden | Minuten | 87% |
-| Budgetverfolgung | Tabellen | Echtzeit | 87% |
-
-### Enthaltene Inhalte
-
-| Ordner | Skills | Beschreibung |
-|--------|--------|--------------|
-| **DDC Toolkit** | 85 | Produktionswerkzeuge inkl. CWICR-Datenbankintegration |
-| **DDC Book** | 50 | Skills basierend auf Data-Driven Construction Methodik |
-| **DDC Insights** | 5 | n8n-Workflow-Vorlagen |
-| **DDC Curated** | 5 | Externe Integrations-Skills |
-| **DDC Innovative** | 22 | Erweiterte KI/ML-Fähigkeiten |
-
-Das Skills-Repository bietet **direkte Integration mit dieser CWICR-Datenbank** — semantische Suche, automatische Kostenberechnungen, Tagesberichte, Fehlererkennung und mehr.
-
-**→ [DDC Skills entdecken](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
 
 ---
 
@@ -340,82 +308,6 @@ Erstellen Sie leistungsstarke Automatisierungs-Pipelines ohne Programmierung. Ve
 4. Aktivieren und testen
 
 Siehe Abschnitt [n8n Workflows](#n8n-workflows--detaillierte-beschreibung) für detaillierte Einrichtung.
-
----
-
-### 🤖 Dify — LLM-Anwendungen erstellen
-
-Erstellen Sie benutzerdefinierte KI-Anwendungen mit DDC CWICR als Wissensbasis.
-
-**Einrichtung:**
-1. Neue Dify-Anwendung erstellen
-2. Wissensbasis hinzufügen → Parquet/CSV-Dateien hochladen oder mit Qdrant verbinden
-3. RAG-Pipeline mit Embeddings konfigurieren
-4. Chat-Oberfläche oder API erstellen
-
-**Anwendungsideen:**
-
-| App-Typ | Beschreibung |
-|---------|--------------|
-| **Baukalkulator-Chatbot** | Konversationsschnittstelle für Kostenabfragen |
-| **Arbeitspositionen-Suche** | Natürlichsprachige Suche über 55.000+ Positionen |
-| **Kostenberater** | KI, die Kostenaufschlüsselungen erklärt und Optimierungen vorschlägt |
-| **Mehrsprachiger Assistent** | Automatische Spracherkennung und Antwort in Benutzersprache |
-| **API-Endpunkt** | REST-API für Integration mit anderen Systemen |
-
-**Beispiel Dify-Prompt-Vorlage:**
-```
-Sie sind ein Baukostenschätzungsassistent mit Zugriff auf die DDC CWICR Datenbank.
-
-Kontext: {{context}}
-
-Benutzerfrage: {{query}}
-
-Liefern Sie genaue Kosteninformationen basierend auf der Datenbank. Einschließlich:
-- Relevante Arbeitspositionen mit Codes
-- Einheitskosten und Mengen
-- Ressourcenaufschlüsselung (Arbeit, Material, Ausrüstung)
-- Gesamtkostenberechnung
-```
-
----
-
-### 🔮 Sim AI & Ähnliche Plattformen
-
-DDC CWICR integriert sich mit jeder KI-Plattform, die unterstützt:
-- **Vektordatenbanken** (Qdrant, Pinecone, Weaviate, Milvus)
-- **Strukturierte Daten** (CSV, Parquet, Excel)
-- **OpenAI Embeddings** (text-embedding-3-large, 3072 Dimensionen)
-
-**Kompatible Plattformen:**
-- **Sim AI** — KI-Simulation und Modellierung
-- **LangChain / LlamaIndex** — LLM-Anwendungsframeworks
-- **Flowise** — Low-Code LLM-App-Builder
-- **Botpress** — Konversations-KI-Plattform
-- **Voiceflow** — Sprach- und Chat-Design
-- **Stack AI** — No-Code KI-Workflows
-- **Relevance AI** — KI-Workforce-Plattform
-
-**Universelles Integrationsmuster:**
-
-```python
-# Funktioniert mit jeder Plattform, die Qdrant unterstützt
-from qdrant_client import QdrantClient
-
-# Mit DDC CWICR verbinden
-client = QdrantClient("ihre-qdrant-instanz", port=6333)
-
-# Semantische Suche
-results = client.search(
-    collection_name="ddc_de_berlin",  # oder ddc_en_toronto, ddc_ru_stpetersburg, ddc_zh_shanghai, etc.
-    query_vector=ihr_embedding,
-    limit=10
-)
-
-# Ergebnisse in Ihrer KI-Anwendung verwenden
-for item in results:
-    print(f"{item.payload['rate_code']}: {item.payload['rate_original_name']}")
-```
 
 ---
 
@@ -848,17 +740,6 @@ Vollausgestatteter Telegram-Bot, der alle Eingabetypen unterstützt: Textbeschre
   <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/Universal%20Estimator%20Bot%20Text%20%20Photo%20PDF.jpg" width="100%"/>
   <br></br>
 </p>
-
-<h3 align="left">🤖 Jetzt testen — Live Demo Bots</h3>
-<p align="left"><i>Testen Sie die Schätzungs-Workflows sofort in Telegram</i></p>
-<h3>📷 Universal Bot</h3>
-<p><b>@OpenConstructionEstimate_bot</b></p>
-<p>Vollausgestatteter Bot für Text, Fotos und PDF</p>
-<a href="https://t.me/OpenConstructionEstimate_bot">
-<img src="https://img.shields.io/badge/Bot_öffnen-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Universal Bot"/>
-</a>
-<br><br>
-
 
 ```mermaid
 flowchart TB
@@ -1474,6 +1355,27 @@ results = client.search(
 )
 ```
 
+
+---
+
+## 💻 Entwicklerbeispiele
+
+Das Verzeichnis [`examples/`](./examples/) enthält **sofort ausführbaren Code** in mehreren Sprachen.
+
+| # | Example | Language | Level |
+|---|---------|----------|-------|
+| 01 | Load and explore data | Python, JS, Rust, R | Beginner |
+| 02 | Semantic search with Qdrant | Python, JS, Rust | Beginner |
+| 03 | Cost estimation from text | Python, JS | Intermediate |
+| 04 | Cost estimation from photos | Python | Intermediate |
+| 05 | BOQ generation & Excel export | Python, JS | Intermediate |
+| 06 | RAG pipeline (Claude + Qdrant) | Python | Advanced |
+| 07 | Multi-language cost comparison | Python | Intermediate |
+| 08 | Data analysis & visualization | Python, R | Intermediate |
+| 09 | Filtered & faceted search | Python | Intermediate |
+| 10 | Embedding generation pipeline | Python | Advanced |
+
+**→ [Alle Beispiele ansehen](./examples/)**
 
 ---
 

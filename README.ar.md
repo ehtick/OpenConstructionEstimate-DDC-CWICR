@@ -28,7 +28,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/الترخيص-CC_BY_4.0-green?style=flat-square" alt="الترخيص">
-  <img src="https://img.shields.io/badge/الإصدار-v0.1.0-blue?style=flat-square" alt="الإصدار">
+  <img src="https://img.shields.io/badge/الإصدار-v0.1.1-blue?style=flat-square" alt="الإصدار">
   <img src="https://img.shields.io/badge/التضمينات-OpenAI_3072d-412991?style=flat-square" alt="التضمينات">
   <img src="https://img.shields.io/badge/قاعدة_البيانات_المتجهة-Qdrant-dc382d?style=flat-square" alt="Qdrant">
   <img src="https://img.shields.io/badge/الأتمتة-n8n-ea4b71?style=flat-square" alt="n8n">
@@ -123,9 +123,8 @@
 - [الوقود المثالي للذكاء الاصطناعي](#-الوقود-المثالي-لمنتجاتك-الذكية) — لماذا هذه القاعدة مثالية للذكاء الاصطناعي
 - [Claude Code و Google Antigravity](#-claude-code--google-antigravity--مساعدو-البرمجة-بالذكاء-الاصطناعي) — مساعدو البرمجة
 - [n8n](#-n8n--أتمتة-سير-العمل-المرئي) — أتمتة سير العمل
-- [Dify](#-dify--بناء-تطبيقات-llm) — تطوير تطبيقات LLM
-- [Sim AI وغيرها](#-sim-ai--منصات-مماثلة) — المنصات المتوافقة
 - [حالات الاستخدام العالمية](#-حالات-الاستخدام-العالمية) — ما يمكنك بناؤه
+- [أمثلة للمطورين](#-أمثلة-للمطورين) — كود جاهز للتشغيل
 
 ### 📊 قاعدة البيانات والبيانات
 - [حول](#حول) — ما هو DDC CWICR
@@ -251,58 +250,19 @@ DDC CWICR ليست مجرد قاعدة بيانات — إنها **وقود جا
 
 ---
 
-## 🎯 DDC Skills — 196 أتمتة AI جاهزة للاستخدام
+## 🎯 DDC Skills
 
 <div dir="rtl">
 
-> **جديد!** [DDC Skills لوكلاء AI في البناء](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — مجموعة أدوات أتمتة كاملة لشركات البناء.
+**[مهارات DDC لوكلاء الذكاء الاصطناعي في البناء](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)** — 196 مهارة أتمتة مع تكامل مباشر في قاعدة بيانات CWICR. استنسخ، افتح بمساعد الترميز بالذكاء الاصطناعي، صف ما تحتاجه.
 
 </div>
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
-    <img src="https://img.shields.io/badge/DDC_Skills-196_أتمتة_AI-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_AI_Automations-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
   </a>
 </p>
-
-<div dir="rtl">
-
-### كيف يعمل
-
-</div>
-
-```
-1. استنساخ مستودع Skills
-2. فتح باستخدام Claude Code أو Cursor أو GitHub Copilot
-3. وصف ما تريد أتمتته — AI يرشدك خطوة بخطوة
-```
-
-<div dir="rtl">
-
-### توفير الوقت
-
-| العملية | قبل | بعد | التخفيض |
-|---------|------|------|---------|
-| البحث عن الأسعار | 15 دقيقة | 10 ثوانٍ | 99% |
-| التقارير اليومية | يدوي | آلي | 92% |
-| تقديرات التكلفة | ساعات | دقائق | 87% |
-| تتبع الميزانية | جداول بيانات | فوري | 87% |
-
-### المحتوى المتضمن
-
-| المجلد | Skills | الوصف |
-|--------|--------|-------|
-| **DDC Toolkit** | 85 | أدوات الإنتاج بما في ذلك تكامل قاعدة بيانات CWICR |
-| **DDC Book** | 50 | مهارات مبنية على منهجية Data-Driven Construction |
-| **DDC Insights** | 5 | قوالب سير عمل n8n |
-| **DDC Curated** | 5 | مهارات التكامل الخارجي |
-| **DDC Innovative** | 22 | قدرات AI/ML متقدمة |
-
-يوفر مستودع Skills **تكاملاً مباشراً مع قاعدة بيانات CWICR** — البحث الدلالي، حسابات التكلفة الآلية، التقارير اليومية، اكتشاف العيوب والمزيد.
-
-</div>
-
-**→ [ابدأ مع DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
 
 ---
 
@@ -364,91 +324,6 @@ claude
 4. التفعيل والاختبار
 
 راجع قسم [سير عمل n8n](#سير-عمل-n8n--الوصف-التفصيلي) للإعداد التفصيلي.
-
----
-
-### 🤖 Dify — بناء تطبيقات LLM
-
-إنشاء تطبيقات ذكاء اصطناعي مخصصة مع DDC CWICR كقاعدة معرفة.
-
-**الإعداد:**
-1. إنشاء تطبيق Dify جديد
-2. إضافة قاعدة معرفة → تحميل ملفات Parquet/CSV أو الاتصال بـ Qdrant
-3. تكوين خط أنابيب RAG مع التضمينات
-4. بناء واجهة الدردشة أو API
-
-**أفكار التطبيقات:**
-
-| نوع التطبيق | الوصف |
-|------------|-------|
-| **روبوت تقدير البناء** | واجهة محادثة لاستفسارات التكلفة |
-| **بحث بنود العمل** | بحث بلغة طبيعية عبر 55,000+ بند |
-| **مستشار التكاليف** | ذكاء اصطناعي يشرح تفصيلات التكاليف ويقترح تحسينات |
-| **مساعد متعدد اللغات** | يكتشف اللغة تلقائياً ويرد بلغة المستخدم |
-| **نقطة نهاية API** | API REST للتكامل مع أنظمة أخرى |
-
-**مثال قالب Dify:**
-
-</div>
-
-```
-أنت مساعد تقدير تكاليف البناء مع وصول إلى قاعدة بيانات DDC CWICR.
-
-السياق: {{context}}
-
-سؤال المستخدم: {{query}}
-
-قدم معلومات تكلفة دقيقة بناءً على القاعدة. تضمن:
-- بنود العمل ذات الصلة مع الرموز
-- التكاليف الوحدوية والكميات
-- تفصيل الموارد (عمالة، مواد، معدات)
-- حساب التكلفة الإجمالية
-```
-
-<div dir="rtl">
-
----
-
-### 🔮 Sim AI ومنصات مماثلة
-
-DDC CWICR يتكامل مع أي منصة ذكاء اصطناعي تدعم:
-- **قواعد البيانات المتجهة** (Qdrant، Pinecone، Weaviate، Milvus)
-- **البيانات المنظمة** (CSV، Parquet، Excel)
-- **تضمينات OpenAI** (text-embedding-3-large، 3072 بُعد)
-
-**المنصات المتوافقة:**
-- **Sim AI** — محاكاة ونمذجة الذكاء الاصطناعي
-- **LangChain / LlamaIndex** — أطر تطبيقات LLM
-- **Flowise** — باني تطبيقات LLM منخفض الكود
-- **Botpress** — منصة الذكاء الاصطناعي التحادثي
-- **Voiceflow** — تصميم الصوت والدردشة
-- **Stack AI** — سير عمل ذكاء اصطناعي بدون كود
-- **Relevance AI** — منصة القوى العاملة الذكية
-
-**نمط التكامل العالمي:**
-
-</div>
-
-```python
-# يعمل مع أي منصة تدعم Qdrant
-from qdrant_client import QdrantClient
-
-# الاتصال بـ DDC CWICR
-client = QdrantClient("your-qdrant-instance", port=6333)
-
-# البحث الدلالي
-results = client.search(
-    collection_name="ddc_ar_dubai",  # أو en، de، ru، zh، إلخ
-    query_vector=your_embedding,
-    limit=10
-)
-
-# استخدام النتائج في تطبيقك
-for item in results:
-    print(f"{item.payload['rate_code']}: {item.payload['rate_original_name']}")
-```
-
-<div dir="rtl">
 
 ---
 
@@ -710,17 +585,6 @@ for item in results:
   <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/Universal%20Estimator%20Bot%20Text%20%20Photo%20PDF.jpg" width="100%"/>
   <br></br>
 </p>
-
-<h3 align="right">🤖 جرب الآن — روبوتات العرض المباشر</h3>
-<p align="right"><i>اختبر سير عمل التقدير فوراً على Telegram</i></p>
-<h3>📷 الروبوت العالمي</h3>
-<p><b>@OpenConstructionEstimate_bot</b></p>
-<p>روبوت كامل للنص والصور وPDF</p>
-<a href="https://t.me/OpenConstructionEstimate_bot">
-<img src="https://img.shields.io/badge/فتح_الروبوت-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="الروبوت العالمي"/>
-</a>
-<br><br>
-
 
 **كيف يعمل:**
 
@@ -1282,6 +1146,27 @@ results = client.search(
 
 <div dir="rtl">
 
+
+---
+
+## 💻 أمثلة للمطورين
+
+يحتوي دليل [`examples/`](./examples/) على **كود جاهز للتشغيل** بعدة لغات برمجة.
+
+| # | Example | Language | Level |
+|---|---------|----------|-------|
+| 01 | Load and explore data | Python, JS, Rust, R | Beginner |
+| 02 | Semantic search with Qdrant | Python, JS, Rust | Beginner |
+| 03 | Cost estimation from text | Python, JS | Intermediate |
+| 04 | Cost estimation from photos | Python | Intermediate |
+| 05 | BOQ generation & Excel export | Python, JS | Intermediate |
+| 06 | RAG pipeline (Claude + Qdrant) | Python | Advanced |
+| 07 | Multi-language cost comparison | Python | Intermediate |
+| 08 | Data analysis & visualization | Python, R | Intermediate |
+| 09 | Filtered & faceted search | Python | Intermediate |
+| 10 | Embedding generation pipeline | Python | Advanced |
+
+**→ [تصفح جميع الأمثلة](./examples/)**
 
 ---
 

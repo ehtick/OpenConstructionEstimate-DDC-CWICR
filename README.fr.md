@@ -25,7 +25,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Licence-CC_BY_4.0-green?style=flat-square" alt="Licence">
-  <img src="https://img.shields.io/badge/Version-v0.1.0-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v0.1.1-blue?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/Embeddings-OpenAI_3072d-412991?style=flat-square" alt="Embeddings">
   <img src="https://img.shields.io/badge/Vector_DB-Qdrant-dc382d?style=flat-square" alt="Qdrant">
   <img src="https://img.shields.io/badge/Automatisation-n8n-ea4b71?style=flat-square" alt="n8n">
@@ -120,9 +120,8 @@
 - [Carburant Parfait pour l'IA](#-carburant-parfait-pour-vos-produits-ia) — Pourquoi cette base de données est idéale pour l'IA
 - [Claude Code & Google Antigravity](#-claude-code--google-antigravity--assistants-de-programmation-ia) — Assistants de programmation IA
 - [n8n](#-n8n--automatisation-visuelle-des-workflows) — Automatisation des workflows
-- [Dify](#-dify--développer-des-applications-llm) — Développement d'applications LLM
-- [Sim AI & Autres](#-sim-ai--plateformes-similaires) — Plateformes compatibles
 - [Cas d'Utilisation Universels](#-cas-dutilisation-universels) — Ce que vous pouvez construire
+- [Exemples pour Développeurs](#-exemples-pour-développeurs) — Code prêt à exécuter
 
 ### 📊 Base de Données & Données
 - [À Propos](#à-propos) — Qu'est-ce que DDC CWICR
@@ -244,46 +243,15 @@ Export vers **Excel, PDF, HTML, systèmes ERP, plateformes BIM** — le schéma 
 
 ---
 
-## 🎯 DDC Skills — 196 Automatisations IA Prêtes à l'Emploi
+## 🎯 DDC Skills
 
-> **Nouveau !** [DDC Skills pour Agents IA dans la Construction](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction) — une boîte à outils d'automatisation complète pour les entreprises de construction.
+**[DDC Skills pour Agents IA dans la Construction](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)** — 196 compétences d'automatisation avec intégration directe dans cette base de données CWICR. Clonez, ouvrez avec un assistant de codage IA, décrivez ce dont vous avez besoin.
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction">
-    <img src="https://img.shields.io/badge/DDC_Skills-196_Automatisations_IA-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
+    <img src="https://img.shields.io/badge/DDC_Skills-196_AI_Automations-blue?style=for-the-badge&logo=robot" alt="DDC Skills">
   </a>
 </p>
-
-### Comment ça Fonctionne
-
-```
-1. Cloner le dépôt Skills
-2. Ouvrir avec Claude Code, Cursor ou GitHub Copilot
-3. Décrire ce que vous voulez automatiser — l'IA vous guide étape par étape
-```
-
-### Gain de Temps
-
-| Processus | Avant | Après | Réduction |
-|-----------|-------|-------|-----------|
-| Recherche de prix | 15 min | 10 sec | 99% |
-| Rapports quotidiens | Manuel | Automatisé | 92% |
-| Estimations de coûts | Heures | Minutes | 87% |
-| Suivi budgétaire | Tableurs | Temps réel | 87% |
-
-### Contenu Inclus
-
-| Dossier | Skills | Description |
-|---------|--------|-------------|
-| **DDC Toolkit** | 85 | Outils de production incl. intégration base de données CWICR |
-| **DDC Book** | 50 | Skills basés sur la méthodologie Data-Driven Construction |
-| **DDC Insights** | 5 | Modèles de workflows n8n |
-| **DDC Curated** | 5 | Skills d'intégration externe |
-| **DDC Innovative** | 22 | Capacités IA/ML avancées |
-
-Le dépôt Skills fournit une **intégration directe avec cette base de données CWICR** — recherche sémantique, calculs de coûts automatisés, rapports quotidiens, détection de défauts et plus.
-
-**→ [Commencer avec DDC Skills](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)**
 
 ---
 
@@ -340,82 +308,6 @@ Construisez des pipelines d'automatisation puissants sans code. Connectez DDC CW
 4. Activer et tester
 
 Voir la section [Workflows n8n](#workflows-n8n--description-détaillée) pour la configuration détaillée.
-
----
-
-### 🤖 Dify — Développer des Applications LLM
-
-Créez des applications IA personnalisées avec DDC CWICR comme base de connaissances.
-
-**Configuration:**
-1. Créer une nouvelle application Dify
-2. Ajouter une Base de Connaissances → Télécharger des fichiers Parquet/CSV ou se connecter à Qdrant
-3. Configurer le pipeline RAG avec les embeddings
-4. Construire votre interface de chat ou API
-
-**Idées d'Applications:**
-
-| Type d'App | Description |
-|------------|-------------|
-| **Chatbot Estimateur de Construction** | Interface conversationnelle pour les requêtes de coûts |
-| **Recherche de Postes de Travail** | Recherche en langage naturel parmi 55 000+ postes |
-| **Conseiller en Coûts** | IA qui explique les ventilations de coûts et suggère des optimisations |
-| **Assistant Multilingue** | Détecte automatiquement la langue et répond dans la langue de l'utilisateur |
-| **Point d'Accès API** | API REST pour l'intégration avec d'autres systèmes |
-
-**Exemple de Template de Prompt Dify:**
-```
-Vous êtes un assistant d'estimation des coûts de construction avec accès à la base de données DDC CWICR.
-
-Contexte: {{context}}
-
-Question de l'utilisateur: {{query}}
-
-Fournissez des informations de coûts précises basées sur la base de données. Incluez:
-- Postes de travail pertinents avec codes
-- Coûts unitaires et quantités
-- Ventilation des ressources (main d'œuvre, matériaux, équipement)
-- Calcul du coût total
-```
-
----
-
-### 🔮 Sim AI & Plateformes Similaires
-
-DDC CWICR s'intègre avec toute plateforme IA qui supporte:
-- **Bases de données vectorielles** (Qdrant, Pinecone, Weaviate, Milvus)
-- **Données structurées** (CSV, Parquet, Excel)
-- **Embeddings OpenAI** (text-embedding-3-large, 3072 dimensions)
-
-**Plateformes Compatibles:**
-- **Sim AI** — Simulation et modélisation IA
-- **LangChain / LlamaIndex** — Frameworks d'applications LLM
-- **Flowise** — Constructeur d'apps LLM low-code
-- **Botpress** — Plateforme d'IA conversationnelle
-- **Voiceflow** — Conception vocale et chat
-- **Stack AI** — Workflows IA no-code
-- **Relevance AI** — Plateforme de workforce IA
-
-**Pattern d'Intégration Universel:**
-
-```python
-# Fonctionne avec toute plateforme supportant Qdrant
-from qdrant_client import QdrantClient
-
-# Se connecter à DDC CWICR
-client = QdrantClient("votre-instance-qdrant", port=6333)
-
-# Recherche sémantique
-results = client.search(
-    collection_name="ddc_fr_paris",  # ou ddc_en_toronto, ddc_de_berlin, ddc_ru_stpetersburg, ddc_zh_shanghai, etc.
-    query_vector=votre_embedding,
-    limit=10
-)
-
-# Utiliser les résultats dans votre application IA
-for item in results:
-    print(f"{item.payload['rate_code']}: {item.payload['rate_original_name']}")
-```
 
 ---
 
@@ -848,17 +740,6 @@ Bot Telegram complet supportant tous les types d'entrée: descriptions textuelle
   <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/Universal%20Estimator%20Bot%20Text%20%20Photo%20PDF.jpg" width="100%"/>
   <br></br>
 </p>
-
-<h3 align="left">🤖 Essayez Maintenant — Bots de Démo en Direct</h3>
-<p align="left"><i>Testez les workflows d'estimation instantanément sur Telegram</i></p>
-<h3>📷 Bot Universel</h3>
-<p><b>@OpenConstructionEstimate_bot</b></p>
-<p>Bot complet pour texte, photos et PDF</p>
-<a href="https://t.me/OpenConstructionEstimate_bot">
-<img src="https://img.shields.io/badge/Ouvrir_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Bot Universel"/>
-</a>
-<br><br>
-
 
 ```mermaid
 flowchart TB
@@ -1474,6 +1355,27 @@ results = client.search(
 )
 ```
 
+
+---
+
+## 💻 Exemples pour Développeurs
+
+Le répertoire [`examples/`](./examples/) contient du **code prêt à exécuter** en plusieurs langages.
+
+| # | Example | Language | Level |
+|---|---------|----------|-------|
+| 01 | Load and explore data | Python, JS, Rust, R | Beginner |
+| 02 | Semantic search with Qdrant | Python, JS, Rust | Beginner |
+| 03 | Cost estimation from text | Python, JS | Intermediate |
+| 04 | Cost estimation from photos | Python | Intermediate |
+| 05 | BOQ generation & Excel export | Python, JS | Intermediate |
+| 06 | RAG pipeline (Claude + Qdrant) | Python | Advanced |
+| 07 | Multi-language cost comparison | Python | Intermediate |
+| 08 | Data analysis & visualization | Python, R | Intermediate |
+| 09 | Filtered & faceted search | Python | Intermediate |
+| 10 | Embedding generation pipeline | Python | Advanced |
+
+**→ [Parcourir tous les exemples](./examples/)**
 
 ---
 
