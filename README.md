@@ -243,6 +243,16 @@ Export to **Excel, PDF, HTML, ERP systems, BIM platforms** — the structured 85
 
 ---
 
+⭐ <b>If you want to see new updates and database versions and if you find our tools useful please give our repositories a star to see more similar applications for the construction industry.</b>
+Star DDC workflow on GitHub and be instantly notified of new releases.
+<p align="center">
+  <br>
+  <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/OCE%20star%20GitHub.gif" width="100%"/>
+  <br></br>
+</p>
+
+---
+
 ## 🎯 DDC Skills — 196 Ready-to-Use AI Automations
 
 **[DDC Skills for AI Agents in Construction](https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction)** — 196 automation skills with direct integration into this CWICR database. Clone, open with AI coding assistant, describe what you need.
@@ -326,17 +336,7 @@ No matter which AI tool you choose, DDC CWICR enables:
 | **BIM Integration** | Connect to Revit/IFC for automated 4D/5D estimation |
 | **Training AI Models** | Use structured data for fine-tuning construction AI |
 
----
 
-⭐ <b>If you want to see new updates and database versions and if you find our tools useful please give our repositories a star to see more similar applications for the construction industry.</b>
-Star DDC workflow on GitHub and be instantly notified of new releases.
-<p align="center">
-  <br>
-  <img src="https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto/blob/main/DDC_in_additon/DDC_readme_content/OCE%20star%20GitHub.gif" width="100%"/>
-  <br></br>
-</p>
-
----
 
 
 ## About
